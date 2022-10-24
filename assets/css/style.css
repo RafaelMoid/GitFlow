@@ -87,6 +87,8 @@ header .links .social a:hover {
 }
 header #btOpenMenu {
   display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 header .brochure-newsletter {
   position: absolute;
@@ -108,6 +110,119 @@ header .brochure-newsletter a:hover {
 }
 header .brochure-newsletter span {
   opacity: 0.34;
+}
+@media screen and (max-width: 980px) {
+  header .links, header .brochure-newsletter, header nav {
+    display: none;
+  }
+  header #btOpenMenu {
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  header .logo {
+    width: 60%;
+    max-width: 250px;
+  }
+  header .logo img {
+    width: 100%;
+  }
+}
+
+.mobile-header {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  margin-right: -70%;
+  width: 70%;
+  max-width: 500px;
+  height: 100vh;
+  background-color: #FFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+  transition: all ease-in-out 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.mobile-header #btCloseMenu {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+.mobile-header nav ul {
+  list-style: none;
+}
+.mobile-header nav ul li {
+  text-align: center;
+  margin-top: 1rem;
+}
+.mobile-header nav ul li a {
+  text-decoration: none;
+  color: #2E3934;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all ease-in-out 0.4s;
+}
+.mobile-header nav ul li a:hover {
+  opacity: 0.34;
+}
+.mobile-header .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.mobile-header .links .bt-language {
+  text-transform: capitalize;
+  color: #2E3934;
+  opacity: 0.34;
+  transition: all ease-in-out 0.4s;
+  font-size: 14px;
+  font-weight: 600;
+}
+.mobile-header .links .bt-language:hover {
+  opacity: 1;
+}
+.mobile-header .links > a {
+  text-decoration: none;
+  color: #2E3934;
+  font-size: 14px;
+}
+.mobile-header .links .social a {
+  text-decoration: none;
+  color: #2E3934;
+  opacity: 0.34;
+  transition: all ease-in-out 0.4s;
+  font-size: 25px;
+}
+.mobile-header .links .social a:hover {
+  opacity: 1;
+}
+.mobile-header .links .brochure-newsletter a {
+  text-decoration: none;
+  color: #2E3934;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.mobile-header .links .brochure-newsletter span {
+  color: #2E3934;
+  opacity: 0.34;
+}
+@media screen and (max-width: 600px) {
+  .mobile-header nav ul li a {
+    font-size: 20px;
+  }
+}
+
+.active {
+  margin-right: 0px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 * {

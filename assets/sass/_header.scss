@@ -66,6 +66,8 @@ header {
 
     #btOpenMenu {
         display: none;
+        font-size: 1.6rem;
+        cursor: pointer;
     }
     
     .brochure-newsletter {
@@ -92,4 +94,139 @@ header {
             opacity: 0.34;
         }
     }
+
+    @include tablet {
+        .links, .brochure-newsletter, nav {
+            display: none;
+        }
+
+        #btOpenMenu {
+            display: block;
+        }
+    }
+
+    @include mobile {
+        .logo {
+            width: 60%;
+            max-width: 250px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.mobile-header {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin-right: -70%;
+    width: 70%;
+    max-width: 500px;
+    height: 100vh;
+    background-color: $white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+    @include transition;
+    @include flex(column, space-around, center);
+
+    #btCloseMenu {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        cursor: pointer;
+        font-size: 1.6rem;
+    }
+
+    nav {
+        ul {
+            list-style: none;     
+            li {
+                text-align: center;
+                margin-top: 1rem;
+                a {
+                    text-decoration: none;
+                    color: $primary;
+                    font-size: $f3;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    @include transition;
+
+                    &:hover {
+                        opacity: 0.34;
+                    }
+                }
+            }
+        }
+    }
+
+    .links {
+        @include flex(column, center, center);
+        gap: 8px;
+
+        .bt-language {
+            text-transform: capitalize;
+            color: $primary;
+            opacity: 0.34;
+            @include transition;
+            font-size: $f5;
+            font-weight: 600;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        >a {
+            text-decoration: none;
+            color: $primary;
+            font-size: $f5;
+        }
+
+        .social {
+            a {
+                text-decoration: none;
+                color: $primary;
+                opacity: 0.34;
+                @include transition;
+                font-size: $f3;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .brochure-newsletter {
+            a {
+                text-decoration: none;
+                color: $primary;
+                font-size: $f7;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+
+            span {
+                color: $primary;
+                opacity: 0.34;
+            }
+        }
+    }
+
+    @include mobile {
+        nav {
+            ul {
+                li {
+                    a {
+                        font-size: $f3-mb;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.active {
+    margin-right: 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }

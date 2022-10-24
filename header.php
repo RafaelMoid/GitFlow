@@ -15,7 +15,7 @@
 
 <body>
     <header class="container">
-        <a href="<?php bloginfo('url'); ?>">
+        <a class="logo" href="<?php bloginfo('url'); ?>">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/marca-site-cpd 1.svg"
                 alt="Logo Light Design">
         </a>
@@ -47,14 +47,14 @@
         <div class="links">
             <span class="bt-language">english</span>
             <a href="tel:+351211914676">+351 211 914 676</a>
-                <div class="social">
-                    <a href="https://instagram.com" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://linkedin.com" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </div>
+            <div class="social">
+                <a href="https://instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
         </div>
         <div class="brochure-newsletter">
             <a href="">brochure</a>
@@ -63,3 +63,49 @@
         </div>
         <i id="btOpenMenu" class="fa-solid fa-bars"></i>
     </header>
+
+    <div class="mobile-header">
+        <i id="btCloseMenu" class="fa-solid fa-x"></i>
+        <nav>
+            <ul>
+                <li>
+                    <a href="<?php bloginfo('url'); ?>/">home</a>
+                </li>
+                <li>
+                    <a href="<?php bloginfo('url'); ?>/sobre">sobre</a>
+                </li>
+                <li>
+                    <a href="<?php bloginfo('url'); ?>/equipa">equipa</a>
+                </li>
+                <li>
+                    <a href="<?php bloginfo('url'); ?>/projetos">projetos</a>
+                </li>
+                <li>
+                    <a href="<?php bloginfo('url'); ?>/blog">blog</a>
+                </li>
+                <li>
+                    <a href="<?php bloginfo('url'); ?>/videos">videos</a>
+                </li>
+                <li>
+                    <a href="<?php bloginfo('url'); ?>/contactos">contactos</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="links">
+            <span class="bt-language">english</span>
+            <a href="tel:+351211914676">+351 211 914 676</a>
+            <div class="social">
+                <a href="https://instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="brochure-newsletter">
+                <a href="">brochure</a>
+                <span>|</span>
+                <a href="">newsletter</a>
+            </div>
+        </div>
+    </div>
