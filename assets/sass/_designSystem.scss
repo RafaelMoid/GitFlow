@@ -53,12 +53,16 @@ $f4-mb: 16px;
     align-items: $align;
 }
 
+@mixin transition {
+    transition: all ease-in-out .4s;
+}
+
 @mixin button($primary-color, $secondary-color) {
     color: $primary-color;
     background-color: $secondary-color;
     padding: 8px;
     text-transform: uppercase;
-    transition: all ease-in-out .4s;
+    @include transition();
     border-radius: 6px;
     border: 2px solid $secondary-color;
     cursor: pointer;

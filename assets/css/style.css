@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +23,121 @@
 }
 .zoom-in-hover:hover {
   transform: scale(1.25);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 12px 0px;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2E3934;
+  transition: all ease-in-out 0.4s;
+}
+header nav ul li a:hover {
+  opacity: 0.34;
+}
+header .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+header .links .bt-language {
+  color: #2E3934;
+  opacity: 0.34;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 12px;
+}
+header .links > a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #2E3934;
+}
+header .links .social a {
+  text-decoration: none;
+  color: #2E3934;
+  opacity: 0.34;
+  margin-left: 6px;
+  font-size: 1.6rem;
+  transition: all ease-in-out 0.4s;
+}
+header .links .social a:first-child {
+  margin-left: 0px;
+}
+header .links .social a:hover {
+  opacity: 1;
+}
+header #btOpenMenu {
+  display: none;
+}
+header .brochure-newsletter {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  color: #2E3934;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+header .brochure-newsletter a {
+  text-decoration: none;
+  color: #2E3934;
+  font-weight: 600;
+  transition: all ease-in-out 0.4s;
+}
+header .brochure-newsletter a:hover {
+  opacity: 0.34;
+}
+header .brochure-newsletter span {
+  opacity: 0.34;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: calc(100% - 60px);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: 95%;
+  }
+}
+
+.zoom-in-hover {
+  transition: 3000ms;
+}
+.zoom-in-hover:hover {
+  transform: scale(1.25);
+}
+
+p {
+  font-size: 4rem;
+  background-color: blue;
 }
 
 button {

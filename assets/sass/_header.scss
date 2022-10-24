@@ -1,3 +1,95 @@
 header {
-    background-color: red;
+    @include flex(row, space-between, center);
+    position: relative;
+    padding: 12px 0px;
+
+    nav {
+        ul {
+            @include flex(row, center, center);
+            gap: 12px;
+            list-style: none;
+
+            li {
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: $f6;
+                    font-weight: 600;
+                    color: $primary;
+                    @include transition;
+
+                    &:hover {
+                        opacity: 0.34;
+                    }
+                }
+            }
+        }
+    }
+
+    .links { //elementos do canto direito do header
+        @include flex(row, center, center);
+        gap: 24px;
+
+        .bt-language {
+            color: $primary;
+            opacity: 0.34;
+            text-transform: capitalize;
+            font-weight: 600;
+            font-size: $f6;
+        }
+
+        >a {
+            font-size: $f5;
+            text-decoration: none;
+            color: $primary;
+        }
+
+        .social {
+            a {
+                text-decoration: none;
+                color: $primary;
+                opacity: 0.34;
+                margin-left: 6px;
+                font-size: 1.6rem;
+                @include transition;
+
+                &:first-child {
+                    margin-left: 0px;
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    #btOpenMenu {
+        display: none;
+    }
+    
+    .brochure-newsletter {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        color: $primary;
+        font-size: $f7;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        a {
+            text-decoration: none;
+            color: $primary;
+            font-weight: 600;
+            @include transition;
+
+            &:hover {
+                opacity: 0.34;
+            }
+        }
+
+        span {
+            opacity: 0.34;
+        }
+    }
 }
