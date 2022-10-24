@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <button>
-    enviar mensagem
+    enviar
 </button>
 
 <?php get_footer(); ?>
