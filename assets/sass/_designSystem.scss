@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+// variables
+
+$white: #FFF;
+$black: #000;
+$primary: #2E3934;
+$newsletter-gray: #6D6E72;
+$secondary: #CECECE;
+$bg-light: #F4F4F4;
+$bg-input: #BCB5AA;
+
+$f1: 45px;
+$f2: 40px;
+$f3: 25px;
+$f4: 20px;
+$f5: 14px;
+$f6: 12px;
+$f7: 10px;
+
+$f1-mb: 36px;
+$f2-mb: 32px;
+$f3-mb: 20px;
+$f4-mb: 16px;
+
+// responsive mixins
+
+@mixin tablet {
+    @media screen and (max-width: 980px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+// styles mixin
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin button($primary-color, $secondary-color) {
+    color: $primary-color;
+    background-color: $secondary-color;
+    padding: 8px;
+    text-transform: uppercase;
+    transition: all ease-in-out .4s;
+    border-radius: 6px;
+    border: 2px solid $secondary-color;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: $f5;
+
+    &:hover {
+        color: $secondary-color;
+        background-color: $primary-color;
+    }
+}
+
+// general classes
+
+.container {
+    width: calc(100% - 60px);
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @include mobile {
+        width: 95%;
+    }
+}
+
+.zoom-in-hover {
+    transition: 3000ms;
+
+    &:hover {
+        transform: scale(1.25);
+    }
+}
