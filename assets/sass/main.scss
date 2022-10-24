@@ -1,4 +1,5 @@
 @import 'designSystem';
+@import 'header';
 
 button {
     @include button($white, $black);
