@@ -139,6 +139,7 @@ header .brochure-newsletter span {
   height: 100vh;
   background-color: #FFF;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+  z-index: 999;
   transition: all ease-in-out 0.4s;
   display: flex;
   flex-direction: column;
