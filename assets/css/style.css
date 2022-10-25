@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -14,6 +15,93 @@
 @media screen and (max-width: 600px) {
   .container {
     width: 95%;
+  }
+}
+
+.interna > h1, .interna > p {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+.interna > h1 {
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+.interna > h1 span {
+  opacity: 0.34;
+}
+.interna > p {
+  font-size: 20px;
+  margin-bottom: 64px;
+  line-height: 2rem;
+  max-width: 780px;
+}
+.interna .galeria {
+  margin: 48px auto;
+  width: 100%;
+  max-width: 1200px;
+}
+.interna .galeria .owl-carousel {
+  width: 95%;
+  margin: 0 auto;
+}
+.interna .galeria .owl-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: -4.5%;
+  width: 109%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.interna .galeria .owl-carousel .owl-nav .owl-prev, .interna .galeria .owl-carousel .owl-nav .owl-next {
+  background-color: #2E3934;
+  color: #FFF;
+  width: 50px;
+  height: 36px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.interna .galeria .owl-carousel .owl-dots {
+  width: 100%;
+  height: 3px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.interna .galeria .owl-carousel .owl-dots button {
+  height: 100%;
+  width: 50px;
+  background-color: #2E3934;
+  opacity: 0.34;
+}
+.interna .galeria .owl-carousel .owl-dots .active {
+  opacity: 1;
+}
+@media screen and (max-width: 980px) {
+  .interna > h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .interna > h1 {
+    font-size: 36px;
+  }
+  .interna > p {
+    font-size: 1rem;
+    line-height: 1.4rem;
   }
 }
 
@@ -372,28 +460,6 @@ footer .contacts .social a:first-child {
   }
 }
 
-.interna-equipa > h1, .interna-equipa > p {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 900px;
-  text-align: center;
-}
-.interna-equipa > h1 {
-  font-size: 45px;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 32px;
-  margin-top: 32px;
-}
-.interna-equipa > h1 span {
-  opacity: 0.34;
-}
-.interna-equipa > p {
-  font-size: 20px;
-  margin-bottom: 64px;
-  line-height: 2rem;
-  max-width: 780px;
-}
 .interna-equipa .equipa-cards {
   max-width: 1000px;
   margin: 0 auto;
@@ -444,60 +510,7 @@ footer .contacts .social a:first-child {
 .interna-equipa .equipa-cards .card .card-info .social a:first-child {
   margin-right: 8px;
 }
-.interna-equipa .equipa-galeria {
-  margin: 48px auto;
-  width: 100%;
-  max-width: 1200px;
-}
-.interna-equipa .equipa-galeria .owl-carousel {
-  width: 95%;
-  margin: 0 auto;
-}
-.interna-equipa .equipa-galeria .owl-carousel .owl-nav {
-  position: absolute;
-  top: 50%;
-  left: -4.5%;
-  width: 109%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.interna-equipa .equipa-galeria .owl-carousel .owl-nav .owl-prev, .interna-equipa .equipa-galeria .owl-carousel .owl-nav .owl-next {
-  background-color: #2E3934;
-  color: #FFF;
-  width: 50px;
-  height: 36px;
-  font-size: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.interna-equipa .equipa-galeria .owl-carousel .owl-dots {
-  width: 100%;
-  height: 3px;
-  margin-top: 24px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-.interna-equipa .equipa-galeria .owl-carousel .owl-dots button {
-  height: 100%;
-  width: 50px;
-  background-color: #2E3934;
-  opacity: 0.34;
-}
-.interna-equipa .equipa-galeria .owl-carousel .owl-dots .active {
-  opacity: 1;
-}
 @media screen and (max-width: 980px) {
-  .interna-equipa > h1 {
-    font-size: 40px;
-  }
   .interna-equipa .equipa-cards .card {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -519,15 +532,58 @@ footer .contacts .social a:first-child {
   }
 }
 @media screen and (max-width: 600px) {
-  .interna-equipa > h1 {
-    font-size: 36px;
-  }
-  .interna-equipa > p {
-    font-size: 1rem;
-    line-height: 1.4rem;
-  }
   .interna-equipa .equipa-cards .card-info p {
     font-size: 14px;
+  }
+}
+
+.interna-sobre > p {
+  max-width: 1000px;
+}
+.interna-sobre .quote {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  padding: 32px;
+  background-image: url("../img/left-quote.png"), url("../img/”.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, 100% 70%;
+  background-size: 80px, 80px;
+}
+.interna-sobre .quote > p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+  font-style: italic;
+}
+.interna-sobre .quote h3 {
+  max-width: 780px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+.interna-sobre .map iframe {
+  width: 100%;
+  margin-bottom: 64px;
+  margin-top: 32px;
+}
+@media screen and (max-width: 980px) {
+  .interna-sobre .quote {
+    background-size: 10%, 10%;
+    padding: 32px 16px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .interna-sobre .quote p {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
+  .interna-sobre .quote h3 {
+    font-size: 1rem;
   }
 }
 

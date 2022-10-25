@@ -4,7 +4,7 @@
 
 <?php get_header(); ?>
 
-<main class="interna-equipa container">
+<main class="interna interna-equipa container">
     <h1>
         <span>Equipa</span><br>Light Design Portugal
     </h1>
@@ -38,7 +38,7 @@
         </div>
         <?php endwhile; endif; ?>
     </section>
-    <section class="equipa-galeria">
+    <section class="galeria">
         <div class="owl-carousel">
             <?php if(have_rows('equipa_galeria')) : while(have_rows('equipa_galeria')) : the_row(); ?>
             <img src="<?php the_sub_field('imagem'); ?>" alt="<?php the_sub_field('descricao'); ?>">
