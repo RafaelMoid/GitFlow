@@ -3,15 +3,15 @@
 <?php get_header(); ?>
 
 <main class="contato">
-  <h1>CONTATOS </br> <b>LIGHT DESIGN PORTUGAL</b></h>
-  <p>
-    Se sua empresa necessita de um projeto profissional de iluminação, entre em
-    contato conosco e em breve nosso setor comercial retornará sua mensagem.
-  </p>
-  <hr>
-  <section class="form">
+  <div class="ctt-wrapper">
+    <h1 class="contacto-header">CONTATOS </br> <b>LIGHT DESIGN PORTUGAL</b></h1>
+    <p class="contacto-sub-titulo">
+      Se sua empresa necessita de um projeto profissional de iluminação, entre em
+      contato conosco e em breve nosso setor comercial retornará sua mensagem.
+    </p>
+    <hr class="contacto-linha">
     <?php echo do_shortcode('[contact-form-7 id="9" title="Formulário de contato"]'); ?>
-  </section>
+  </div>
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.8312981225677!2d-9.230412185161306!3d38.69871926623667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecb7bd3a1697f%3A0x2f03b56ec5b34eb3!2sR.%20Maj.%20Afonso%20Palla%2023h%2C%201495-001%20Alg%C3%A9s%2C%20Portugal!5e0!3m2!1spt-BR!2sbr!4v1666717533578!5m2!1spt-BR!2sbr" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </main>
 

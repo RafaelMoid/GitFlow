@@ -531,4 +531,115 @@ footer .contacts .social a:first-child {
   }
 }
 
+main.contato {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+main.contato .ctt-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+main.contato .ctt-wrapper .contacto-header {
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 300;
+  line-height: 54.86px;
+}
+main.contato .ctt-wrapper .contacto-header b {
+  font-weight: 500;
+}
+main.contato .ctt-wrapper .contacto-sub-titulo {
+  font-size: 20px;
+  margin-top: 3rem;
+  text-align: center;
+  padding: 0 15%;
+  line-height: 24px;
+}
+main.contato .ctt-wrapper .contacto-linha {
+  width: 85%;
+  margin: 4rem auto;
+}
+main.contato .ctt-wrapper #wrapper-teste {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  color: #727377;
+  margin: 0 10%;
+  margin-bottom: 88px;
+}
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+  margin-right: 29px;
+}
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-left input {
+  width: 100%;
+  height: 36px;
+  background: #F9F8F6;
+  border: 1px solid #E9E9E9;
+  box-shadow: 0px 0px 0px 2px #F5F5F5;
+  border-radius: 4px;
+  margin: 11px 0 11px 0;
+}
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+  margin-left: 29px;
+}
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right textarea {
+  width: 100%;
+  height: 300px;
+  background: #F9F8F6;
+  border: 1px solid #BCB5AA;
+  border-radius: 4px;
+}
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper .wpcf7-submit {
+  color: #ffffff;
+  background-color: #000000;
+  padding: 8px;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.4s;
+  border-radius: 6px;
+  border: 2px solid #000000;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  height: 57px;
+  width: 189px;
+}
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper .wpcf7-submit:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper span {
+  margin: 0;
+}
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper .wpcf7-spinner {
+  display: none;
+}
+main.contato iframe {
+  max-width: 100%;
+  margin-bottom: 54px;
+}
+
 /*# sourceMappingURL=style.css.map */
