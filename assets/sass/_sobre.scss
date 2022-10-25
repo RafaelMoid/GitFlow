@@ -1,0 +1,63 @@
+.interna-sobre {
+    >p {
+        max-width: 1000px;
+    }
+
+    .quote {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 120px;
+        margin-bottom: 120px;
+        padding: 32px;
+        background-image: url('../img/left-quote.png'), url('../img/”.png');
+        background-repeat: no-repeat, no-repeat;
+        background-position: top left, 100% 70%;
+        background-size: 80px, 80px;
+
+        >p {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            max-width: 1000px;
+            text-align: center;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        h3 {
+            max-width: 780px;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 24px;
+        }
+    }
+
+    .map {
+        iframe {
+            width: 100%;
+            margin-bottom: 64px;
+            margin-top: 32px;
+        }
+    }
+
+    @include tablet {
+        .quote {
+            background-size: 10%, 10%;
+            padding: 32px 16px;
+        }
+    }
+
+    @include mobile {
+        .quote {
+            
+            p {
+                font-size: 0.9rem;
+                line-height: 1.3rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+        }
+    }
+}
