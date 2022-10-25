@@ -1,0 +1,181 @@
+.interna-equipa {
+
+    >h1, >p {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 900px;
+        text-align: center;
+    }
+
+    >h1 {
+        font-size: $f1;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 32px;
+        margin-top: 32px;
+
+        span {
+            opacity: 0.34;
+        }
+    }
+
+    >p {
+        font-size: $f4;
+        margin-bottom: 64px;
+        line-height: 2rem;
+        max-width: 780px;
+    }
+
+    .equipa-cards {
+        max-width: 1000px;
+        margin: 0 auto;
+        @include flex(column, center, center);
+        gap: 64px;
+
+        .card {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 48px;
+
+            .card-img {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .card-info {
+                @include flex(column, center, flex-start);
+                gap: 16px;
+
+                h3 {
+                    text-transform: uppercase;
+                }
+
+                p {
+                    text-align: justify;
+                    line-height: 1.5rem;
+                }
+
+                .card-line {
+                    width: 50px;
+                    height: 2px;
+                    background-color: $primary;
+                    opacity: 0.34;
+                }
+
+                .social {
+                    a {
+                        font-size: $f3;
+                        opacity: 0.34;
+                        @include transition;
+                        text-decoration: none;
+                        color: $primary;
+        
+                        &:hover {
+                            opacity: 1;
+                        }
+        
+                        &:first-child {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .equipa-galeria {
+        margin: 48px auto;
+        width: 100%;
+        max-width: 1200px;
+
+        .owl-carousel {
+            width: 95%;
+            margin: 0 auto;
+
+            .owl-nav {
+                position: absolute;
+                top: 50%;
+                left: -4.5%;
+                width: 109%;
+                transform: translateY(-50%);
+                @include flex(row, space-between, center);
+
+                .owl-prev, .owl-next {
+                    background-color: $primary;
+                    color: $white;
+                    width: 50px;
+                    height: 36px;
+                    font-size: $f4;
+                    @include flex(row, center, center);
+                }
+            }
+
+            .owl-dots {
+                width: 100%;
+                height: 3px;
+                margin-top: 24px;
+                @include flex(row, center, center);
+                gap: 24px;
+
+                button {
+                    height: 100%;
+                    width: 50px;
+                    background-color: $primary;
+                    opacity: 0.34;
+                }
+
+                .active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    @include tablet {
+        >h1 {
+            font-size: $f2;
+        }
+
+        .equipa-cards {
+            .card {
+                grid-template-columns: 1fr;
+                gap: 24px;
+
+                .card-img {
+                    @include flex(row, center, center);
+                    img {
+                        max-width: 280px;
+                    }
+                }
+
+                .card-info {
+                    align-items: center;
+                    
+                    h3, p {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        >h1 {
+            font-size: $f1-mb;
+        }
+
+        >p {
+            font-size: 1rem;
+            line-height: 1.4rem;
+        }
+
+        .equipa-cards {
+            .card-info {
+                p {
+                    font-size: $f5;
+                }
+            }
+        }
+    }
+}

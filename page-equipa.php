@@ -6,7 +6,7 @@
 
 <main class="interna-equipa container">
     <h1>
-        Equipa<br>Light Design Portugal
+        <span>Equipa</span><br>Light Design Portugal
     </h1>
     <p>
         Nossa equipa cria peças exclusivas, fabrica, projecta, comercializa, instala e
