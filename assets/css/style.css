@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -231,6 +230,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 32px;
 }
 footer .newsletter, footer .contacts {
   width: 100%;
@@ -370,36 +370,6 @@ footer .contacts .social a:first-child {
   footer .contacts {
     padding: 32px 0px;
   }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-}
-
-.container {
-  width: calc(100% - 60px);
-  max-width: 1440px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 600px) {
-  .container {
-    width: 95%;
-  }
-}
-
-.zoom-in-hover {
-  transition: 3000ms;
-}
-.zoom-in-hover:hover {
-  transform: scale(1.25);
-}
-
-p {
-  font-size: 4rem;
-  background-color: blue;
 }
 
 /*# sourceMappingURL=style.css.map */

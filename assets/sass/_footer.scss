@@ -1,5 +1,6 @@
 footer {
     @include flex(column, center, center);
+    padding-top: 32px;
 
     .newsletter, .contacts {
         width: 100%;
