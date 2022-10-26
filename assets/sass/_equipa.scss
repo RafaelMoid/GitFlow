@@ -93,3 +93,15 @@
         }
     }
 }
+
+.page-template-page-equipa {
+    header, .mobile-header {
+        nav {
+            ul {
+                li:nth-child(3) {
+                    opacity: 0.34;
+                }
+            }
+        }
+    }
+}

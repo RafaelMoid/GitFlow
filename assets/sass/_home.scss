@@ -1,0 +1,13 @@
+
+
+.home {
+    header, .mobile-header {
+        nav {
+            ul {
+                li:nth-child(1) {
+                    opacity: 0.34;
+                }
+            }
+        }
+    }
+}

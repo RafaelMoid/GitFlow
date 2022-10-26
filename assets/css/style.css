@@ -460,6 +460,10 @@ footer .contacts .social a:first-child {
   }
 }
 
+.home header nav ul li:nth-child(1), .home .mobile-header nav ul li:nth-child(1) {
+  opacity: 0.34;
+}
+
 .interna-equipa .equipa-cards {
   max-width: 1000px;
   margin: 0 auto;
@@ -535,6 +539,10 @@ footer .contacts .social a:first-child {
   .interna-equipa .equipa-cards .card-info p {
     font-size: 14px;
   }
+}
+
+.page-template-page-equipa header nav ul li:nth-child(3), .page-template-page-equipa .mobile-header nav ul li:nth-child(3) {
+  opacity: 0.34;
 }
 
 main.contato {
@@ -696,6 +704,10 @@ main.contato iframe {
   .interna-sobre .quote h3 {
     font-size: 1rem;
   }
+}
+
+.page-template-page-sobre header nav ul li:nth-child(2), .page-template-page-sobre .mobile-header nav ul li:nth-child(2) {
+  opacity: 0.34;
 }
 
 /*# sourceMappingURL=style.css.map */
