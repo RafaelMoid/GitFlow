@@ -462,6 +462,7 @@ footer .contacts .social a:first-child {
 
 .home header nav ul li:nth-child(1), .home .mobile-header nav ul li:nth-child(1) {
   opacity: 0.34;
+  pointer-events: none;
 }
 
 .interna-equipa .equipa-cards {
@@ -543,6 +544,7 @@ footer .contacts .social a:first-child {
 
 .page-template-page-equipa header nav ul li:nth-child(3), .page-template-page-equipa .mobile-header nav ul li:nth-child(3) {
   opacity: 0.34;
+  pointer-events: none;
 }
 
 main.contato {
@@ -699,6 +701,7 @@ main.contato iframe {
 .page-template-page-contato header nav ul li:nth-child(7),
 .page-template-page-contato .mobile-header nav ul li:nth-child(7) {
   opacity: 0.34;
+  pointer-events: none;
 }
 
 .interna-sobre > p {
@@ -753,6 +756,7 @@ main.contato iframe {
 
 .page-template-page-sobre header nav ul li:nth-child(2), .page-template-page-sobre .mobile-header nav ul li:nth-child(2) {
   opacity: 0.34;
+  pointer-events: none;
 }
 
 .interna-projetos .categorias {
@@ -825,6 +829,7 @@ main.contato iframe {
 
 .post-type-archive-projetos header nav ul li:nth-child(4), .post-type-archive-projetos .mobile-header nav ul li:nth-child(4) {
   opacity: 0.34;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=style.css.map */

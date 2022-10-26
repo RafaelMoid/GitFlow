@@ -85,6 +85,7 @@
             ul {
                 li:nth-child(4) {
                     opacity: 0.34;
+                    pointer-events: none;
                 }
             }
         }
