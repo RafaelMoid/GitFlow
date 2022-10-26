@@ -19,28 +19,18 @@
 
 <!-- CÓDIGO DO CF7 - FORMULARIO DE CONTATO
   
-<div id="form-wrapper-left">
-<label> Nome
-    [text* your-name] </label>
-
+<div id="wrapper-teste"><div id="form-wrapper-left"><label>Nome
+[text* your-name]</label>
 <label> E-mail
-    [email* email] </label>
-
+[email* email]</label>
 <label> Telefone
-    [tel* tel] </label>
-
+[tel* tel]</label>
 <label> Departamento
-    [text departamento] </label>
-</div>
+[text departamento]</label></div>
 
-<div id="form-wrapper-right">
-
-<label> Mensagem (opcional)
-    [textarea message] </label>
-
-[checkbox checkbox-aceite use_label_element "Desejo receber a Newsletter"]
-
-[submit "Enviar"]
-</div> 
+<div id="form-wrapper-right"><label> Mensagem (opcional)
+[textarea message]</label>
+<div id="contact-btn-wrapper">[checkbox checkbox-aceite use_label_element "Desejo receber a Newsletter"]
+[submit "Enviar" id="btn-submit"]</div></div></div>
 
 FIM DO CÓDIGO DO CF7 - FORMULARIO DE CONTATO-->
