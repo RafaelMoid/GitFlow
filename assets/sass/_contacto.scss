@@ -20,6 +20,10 @@ main.contato {
       font-weight: 300;
       line-height: 54.86px;
 
+      @include mobile {
+        font-size: $f1-mb;
+      }
+
       b {
         font-weight: 500;
       }
@@ -32,6 +36,10 @@ main.contato {
       text-align: center;
       padding: 0 15%;
       line-height: 24px;
+
+      @include mobile {
+        font-size: $f4-mb;
+      }
     }
 
     .contacto-linha {
@@ -46,7 +54,6 @@ main.contato {
       justify-content: center;
       color: #727377;
       margin-bottom: 88px;
-
 
       #form-wrapper-left {
         width: 30%;
@@ -108,8 +115,37 @@ main.contato {
 
       }
 
+
+      @include mobile {
+        flex-direction: column;
+        
+        #form-wrapper-left {
+          width: 100% !important;
+          align-items: center;
+          margin-right: 0;
+          font-size: $f4-mb;
+        }
+
+        #form-wrapper-right {
+          width: 100% !important;
+          align-items: center;
+          margin-left: 0;
+          margin-top: 32px;
+          font-size: $f4-mb;
+
+          #contact-btn-wrapper {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+
+        }
+
+      }
+
     }
   }
+
 
   iframe {
     max-width: 100%;
@@ -118,13 +154,15 @@ main.contato {
 }
 
 .page-template-page-sobre {
-  header, .mobile-header {
-      nav {
-          ul {
-              li:nth-child(2) {
-                  opacity: 0.34;
-              }
-          }
+
+  header,
+  .mobile-header {
+    nav {
+      ul {
+        li:nth-child(2) {
+          opacity: 0.34;
+        }
       }
+    }
   }
 }
