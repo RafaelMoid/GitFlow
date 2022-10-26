@@ -14,7 +14,7 @@ main.contato {
 
 
     .contacto-header {
-      margin-top: 5rem;
+      margin-top: 3rem;
       text-align: center;
       font-size: $f1;
       font-weight: 300;
@@ -45,6 +45,8 @@ main.contato {
     .contacto-linha {
       width: 85%;
       margin: 4rem auto;
+      height: 3px;
+      background-color: #e4e4e4;
     }
 
     .wrapper-teste {
@@ -124,6 +126,10 @@ main.contato {
           align-items: center;
           margin-right: 0;
           font-size: $f4-mb;
+
+          label {
+            width: 90%;
+          }
         }
 
         #form-wrapper-right {
@@ -132,6 +138,10 @@ main.contato {
           margin-left: 0;
           margin-top: 32px;
           font-size: $f4-mb;
+
+          label {
+            width: 90%;
+          }
 
           #contact-btn-wrapper {
             flex-direction: column;
@@ -161,6 +171,7 @@ main.contato {
       ul {
         li:nth-child(7) {
           opacity: 0.34;
+          pointer-events: none;
         }
       }
     }

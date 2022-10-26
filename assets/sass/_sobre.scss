@@ -68,6 +68,7 @@
             ul {
                 li:nth-child(2) {
                     opacity: 0.34;
+                    pointer-events: none;
                 }
             }
         }
