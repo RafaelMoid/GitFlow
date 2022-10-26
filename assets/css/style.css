@@ -541,6 +541,56 @@ footer .contacts .social a:first-child {
   }
 }
 
+.interna-sobre > p {
+  max-width: 1000px;
+}
+.interna-sobre .quote {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  padding: 32px;
+  background-image: url("../img/left-quote.png"), url("../img/”.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, 100% 70%;
+  background-size: 80px, 80px;
+}
+.interna-sobre .quote > p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+  font-style: italic;
+}
+.interna-sobre .quote h3 {
+  max-width: 780px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+.interna-sobre .map iframe {
+  width: 100%;
+  margin-bottom: 64px;
+  margin-top: 32px;
+}
+@media screen and (max-width: 980px) {
+  .interna-sobre .quote {
+    background-size: 10%, 10%;
+    padding: 32px 16px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .interna-sobre .quote p {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
+  .interna-sobre .quote h3 {
+    font-size: 1rem;
+  }
+}
+
 .page-template-page-equipa header nav ul li:nth-child(3), .page-template-page-equipa .mobile-header nav ul li:nth-child(3) {
   opacity: 0.34;
 }
@@ -580,16 +630,15 @@ main.contato .ctt-wrapper .contacto-linha {
   width: 85%;
   margin: 4rem auto;
 }
-main.contato .ctt-wrapper #wrapper-teste {
-  width: 100%;
+main.contato .ctt-wrapper .wrapper-teste {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: center;
   color: #727377;
-  margin: 0 10%;
   margin-bottom: 88px;
 }
-main.contato .ctt-wrapper #wrapper-teste #form-wrapper-left {
+main.contato .ctt-wrapper .wrapper-teste #form-wrapper-left {
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -597,7 +646,7 @@ main.contato .ctt-wrapper #wrapper-teste #form-wrapper-left {
   font-size: 20px;
   margin-right: 29px;
 }
-main.contato .ctt-wrapper #wrapper-teste #form-wrapper-left input {
+main.contato .ctt-wrapper .wrapper-teste #form-wrapper-left input {
   width: 100%;
   height: 36px;
   background: #F9F8F6;
@@ -606,7 +655,7 @@ main.contato .ctt-wrapper #wrapper-teste #form-wrapper-left input {
   border-radius: 4px;
   margin: 11px 0 11px 0;
 }
-main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right {
+main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -614,20 +663,20 @@ main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right {
   font-size: 20px;
   margin-left: 29px;
 }
-main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right textarea {
+main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right textarea {
   width: 100%;
   height: 300px;
   background: #F9F8F6;
   border: 1px solid #BCB5AA;
   border-radius: 4px;
 }
-main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper {
+main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right #contact-btn-wrapper {
   margin-top: 36px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper .wpcf7-submit {
+main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right #contact-btn-wrapper .wpcf7-submit {
   color: #ffffff;
   background-color: #000000;
   padding: 8px;
@@ -641,14 +690,14 @@ main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrappe
   height: 57px;
   width: 189px;
 }
-main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper .wpcf7-submit:hover {
+main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right #contact-btn-wrapper .wpcf7-submit:hover {
   color: #000000;
   background-color: #ffffff;
 }
-main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper span {
+main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right #contact-btn-wrapper span {
   margin: 0;
 }
-main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper .wpcf7-spinner {
+main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right #contact-btn-wrapper .wpcf7-spinner {
   display: none;
 }
 main.contato iframe {
@@ -704,10 +753,6 @@ main.contato iframe {
   .interna-sobre .quote h3 {
     font-size: 1rem;
   }
-}
-
-.page-template-page-sobre header nav ul li:nth-child(2), .page-template-page-sobre .mobile-header nav ul li:nth-child(2) {
-  opacity: 0.34;
 }
 
 /*# sourceMappingURL=style.css.map */

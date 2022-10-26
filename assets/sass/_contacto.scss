@@ -39,13 +39,12 @@ main.contato {
       margin: 4rem auto;
     }
 
-    #wrapper-teste {
-      width: 100%;
+    .wrapper-teste {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
+      justify-content: center;
       color: #727377;
-      margin: 0 10%;
       margin-bottom: 88px;
 
 
@@ -115,5 +114,17 @@ main.contato {
   iframe {
     max-width: 100%;
     margin-bottom: 54px;
+  }
+}
+
+.page-template-page-sobre {
+  header, .mobile-header {
+      nav {
+          ul {
+              li:nth-child(2) {
+                  opacity: 0.34;
+              }
+          }
+      }
   }
 }
