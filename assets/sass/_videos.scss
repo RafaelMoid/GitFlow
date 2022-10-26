@@ -69,3 +69,18 @@ main.videos {
     }
   }
 }
+
+.page-template-page-contato {
+
+  header,
+  .mobile-header {
+    nav {
+      ul {
+        li:nth-child(6) {
+          opacity: 0.34;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
