@@ -39,7 +39,7 @@ main.contato {
       margin: 4rem auto;
     }
 
-    .wrapper-teste {
+    #wrapper-teste {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
@@ -117,11 +117,11 @@ main.contato {
   }
 }
 
-.page-template-page-sobre {
+.page-template-page-contato {
   header, .mobile-header {
       nav {
           ul {
-              li:nth-child(2) {
+              li:nth-child(7) {
                   opacity: 0.34;
               }
           }
