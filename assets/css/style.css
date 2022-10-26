@@ -826,8 +826,8 @@ main.videos .videos-wrapper .wrapper-videos2 {
   }
 }
 
-.page-template-page-contato header nav ul li:nth-child(6),
-.page-template-page-contato .mobile-header nav ul li:nth-child(6) {
+.page-template-page-videos header nav ul li:nth-child(6),
+.page-template-page-videos .mobile-header nav ul li:nth-child(6) {
   opacity: 0.34;
   pointer-events: none;
 }
