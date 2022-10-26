@@ -40,7 +40,7 @@ function custom_post_type_projetos() {
 		'labels'                => $labels,
 		'supports'              => true,
         'supports'              => array('title', 'editor', 'thumbnail', 'excerpt'),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'taxonomies'            => array( 'categoria' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
