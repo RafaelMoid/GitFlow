@@ -1,3 +1,4 @@
+// selecionando os botões de cada categoria, botão "todos" e os cards dos projetos
 const categoriesList = document.querySelectorAll('.categorias li');
 const btShowAll = document.getElementById('btShowAll');
 const projectCards = document.querySelectorAll('.projeto-card');
@@ -8,6 +9,7 @@ function showAll() {
     }
 }
 
+// recebe a categoria pelo data-category do botão clicado e então mostra apenas os cards com o mesmo data-category
 function showSelectedCategory(category) {
     for(i = 0; i < projectCards.length; i++) {
         if (projectCards[i].dataset.category != category) {
@@ -18,6 +20,7 @@ function showSelectedCategory(category) {
     }
 }
 
+// remove a classe active de todos os itens do menu e aplica apenas no elemento selecionado
 function handleActive(e) {
     btShowAll.classList.remove('active');
     for(i = 0; i < categoriesList.length; i++) {
