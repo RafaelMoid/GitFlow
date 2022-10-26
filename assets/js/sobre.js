@@ -10,8 +10,3 @@ $(document).ready(function () {
     });
 
 });
-
-const headerMenu = document.querySelectorAll('nav');
-
-headerMenu[0].children[0].children[1].style.opacity = '0.34'; // header desktop
-headerMenu[1].children[0].children[1].style.opacity = '0.34'; // header mobile
