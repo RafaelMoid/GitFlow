@@ -61,3 +61,15 @@
         }
     }
 }
+
+.page-template-page-sobre {
+    header, .mobile-header {
+        nav {
+            ul {
+                li:nth-child(2) {
+                    opacity: 0.34;
+                }
+            }
+        }
+    }
+}

@@ -15,7 +15,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?> >
     <header class="container">
         <a class="logo" href="<?php bloginfo('url'); ?>">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/marca-site-cpd 1.svg"
