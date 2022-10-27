@@ -271,6 +271,11 @@
             text-decoration: none;
             text-transform: uppercase;
             font-size: $f6;
+            @include transition;
+
+            &:hover {
+                color: $primary;
+            }
         }
 
         select {
@@ -341,7 +346,7 @@
     }
 }
 
-.post-type-archive-projetos {
+.post-type-archive-projetos, .single-projetos {
     header, .mobile-header {
         nav {
             ul {
