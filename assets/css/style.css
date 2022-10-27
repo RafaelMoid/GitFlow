@@ -594,7 +594,7 @@ main.contato .ctt-wrapper .contacto-linha {
   height: 3px;
   background-color: #e4e4e4;
 }
-main.contato .ctt-wrapper .wrapper-teste {
+main.contato .ctt-wrapper #wrapper-teste {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -602,7 +602,7 @@ main.contato .ctt-wrapper .wrapper-teste {
   color: #727377;
   margin-bottom: 88px;
 }
-main.contato .ctt-wrapper .wrapper-teste #form-wrapper-left {
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-left {
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -610,7 +610,7 @@ main.contato .ctt-wrapper .wrapper-teste #form-wrapper-left {
   font-size: 20px;
   margin-right: 29px;
 }
-main.contato .ctt-wrapper .wrapper-teste #form-wrapper-left input {
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-left input {
   width: 100%;
   height: 36px;
   background: #F9F8F6;
@@ -619,7 +619,7 @@ main.contato .ctt-wrapper .wrapper-teste #form-wrapper-left input {
   border-radius: 4px;
   margin: 11px 0 11px 0;
 }
-main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right {
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -627,20 +627,20 @@ main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right {
   font-size: 20px;
   margin-left: 29px;
 }
-main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right textarea {
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right textarea {
   width: 100%;
   height: 300px;
   background: #F9F8F6;
   border: 1px solid #BCB5AA;
   border-radius: 4px;
 }
-main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right #contact-btn-wrapper {
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper {
   margin-top: 36px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right #contact-btn-wrapper .wpcf7-submit {
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper .wpcf7-submit {
   color: #ffffff;
   background-color: #000000;
   padding: 8px;
@@ -654,40 +654,40 @@ main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right #contact-btn-wrappe
   height: 57px;
   width: 189px;
 }
-main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right #contact-btn-wrapper .wpcf7-submit:hover {
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper .wpcf7-submit:hover {
   color: #000000;
   background-color: #ffffff;
 }
-main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right #contact-btn-wrapper span {
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper span {
   margin: 0;
 }
-main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right #contact-btn-wrapper .wpcf7-spinner {
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper .wpcf7-spinner {
   display: none;
 }
 @media screen and (max-width: 600px) {
-  main.contato .ctt-wrapper .wrapper-teste {
+  main.contato .ctt-wrapper #wrapper-teste {
     flex-direction: column;
   }
-  main.contato .ctt-wrapper .wrapper-teste #form-wrapper-left {
+  main.contato .ctt-wrapper #wrapper-teste #form-wrapper-left {
     width: 100% !important;
     align-items: center;
     margin-right: 0;
     font-size: 16px;
   }
-  main.contato .ctt-wrapper .wrapper-teste #form-wrapper-left label {
+  main.contato .ctt-wrapper #wrapper-teste #form-wrapper-left label {
     width: 90%;
   }
-  main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right {
+  main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right {
     width: 100% !important;
     align-items: center;
     margin-left: 0;
     margin-top: 32px;
     font-size: 16px;
   }
-  main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right label {
+  main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right label {
     width: 90%;
   }
-  main.contato .ctt-wrapper .wrapper-teste #form-wrapper-right #contact-btn-wrapper {
+  main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -763,7 +763,7 @@ main.videos .videos-header {
   text-align: center;
   font-weight: 300;
   font-size: 45px;
-  margin-top: 75px;
+  margin-top: 3rem;
 }
 @media screen and (max-width: 600px) {
   main.videos .videos-header {
@@ -808,7 +808,7 @@ main.videos .videos-wrapper .wrapper-videos1 {
   gap: 12px;
   grid-template-columns: 1fr 1fr;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 980px) {
   main.videos .videos-wrapper .wrapper-videos1 {
     grid-template-columns: 1fr;
     margin-top: 0;
@@ -820,7 +820,7 @@ main.videos .videos-wrapper .wrapper-videos2 {
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 72px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 980px) {
   main.videos .videos-wrapper .wrapper-videos2 {
     grid-template-columns: 1fr;
   }

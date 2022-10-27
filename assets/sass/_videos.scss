@@ -4,7 +4,7 @@ main.videos {
     text-align: center;
     font-weight: 300;
     font-size: $f1;
-    margin-top: 75px;
+    margin-top: 3rem;
 
     @include mobile {
       font-size: $f1-mb;
@@ -51,7 +51,7 @@ main.videos {
       gap: 12px;
       grid-template-columns: 1fr 1fr;
 
-      @include mobile {
+      @include tablet {
         grid-template-columns: 1fr;
         margin-top: 0;
       }
@@ -63,7 +63,7 @@ main.videos {
       grid-template-columns: 1fr 1fr 1fr;
       margin-bottom: 72px;
 
-      @include mobile {
+      @include tablet {
         grid-template-columns: 1fr;
       }
     }
