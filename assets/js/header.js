@@ -12,3 +12,17 @@ function closeMenu() {
 
 btOpenMenu.addEventListener('click', openMenu);
 btCloseMenu.addEventListener('click', closeMenu);
+
+const btScrollUp = document.getElementById('btScrollUp');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY >= (document.body.scrollHeight * 0.7)) {
+        btScrollUp.classList.remove('hide');
+    } else {
+        btScrollUp.classList.add('hide');
+    }
+});
+
+btScrollUp.addEventListener('click', () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});

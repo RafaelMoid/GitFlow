@@ -111,3 +111,8 @@
             </div>
         </div>
     </div>
+
+    <div id="btScrollUp" class="hide">
+        <i class="fa-solid fa-arrow-up"></i>
+        <span>Voltar para o topo</span>
+    </div>
