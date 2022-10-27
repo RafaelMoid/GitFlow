@@ -16,7 +16,7 @@ btCloseMenu.addEventListener('click', closeMenu);
 const btScrollUp = document.getElementById('btScrollUp');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY >= (document.body.scrollHeight * 0.7)) {
+    if ((window.scrollY + window.innerHeight) >= (document.body.scrollHeight * 0.8)) {
         btScrollUp.classList.remove('hide');
     } else {
         btScrollUp.classList.add('hide');
