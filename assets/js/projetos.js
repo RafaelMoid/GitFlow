@@ -38,3 +38,17 @@ for(i = 1; i < categoriesList.length; i++) {
     });
     categoriesList[i].addEventListener('click', handleActive);
 }
+
+// caso venha de outra página...
+
+function handleUrl() {
+    const categorySlug = window.location.href.replace('http://lightdesignpt.local/projetos', '').replace('/', '').replace('#', '');
+
+    for(i = 1; i < categoriesList.length; i++) {
+        if(categoriesList[i].dataset.category == categorySlug) {
+            categoriesList[i].click();
+        }
+    }
+}
+
+handleUrl();

@@ -79,6 +79,268 @@
     }
 }
 
+.interna-projeto { // pagina single
+    margin-top: 2rem;
+    @include flex(column, center, center);
+
+    >a {
+        color: #adadad;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: $f6;
+        @include transition;
+        width: 100%;
+        text-align: left;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    >h1 {
+        margin-top: 1rem;
+        max-width: 100%;
+
+        span {
+            font-size: 30px;
+
+            @include mobile {
+                font-size: 27px;
+            }
+        }
+    }
+
+    >img {
+        max-width: 1440px;
+        width: 100vw;
+    }
+
+    .sobre-projeto {
+        width: 95%;
+        @include flex(row, space-around, center);
+        gap: 7%;
+
+        .texto-sobre {
+            min-height: 300px;
+            gap: 48px;
+            @include flex(column, space-around, flex-start);
+            padding: 48px 0px;
+            width: 48%;
+
+            h2 {
+                text-transform: uppercase;
+                font-size: $f1;
+                font-weight: 500;
+
+                span {
+                    font-weight: 300;
+                }
+            }
+
+            p {
+                font-size: $f4;
+                text-align: justify;
+                line-height: 1.8rem;
+            }
+        }
+        .detalhes-tecnicos {
+            background-color: #efefef;
+            padding: 32px;
+            width: 52%;
+            transform: translateY(-20%);
+            @include flex(column, center, flex-start);
+            gap: 20px;
+    
+            >span {
+                color: #adadad;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: $f6;
+            }
+    
+            >h3 {
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: $f4;
+            }
+    
+            .lista-infos {
+                list-style-type: none;
+                text-transform: uppercase;
+                font-size: $f5;
+                font-weight: 500;
+            }
+    
+            p {
+                font-size: $f5;
+                text-align: justify;
+                color: $primary;
+            }
+    
+            .lista-topicos {
+                font-size: $f5;
+                margin-left: 1.6rem;
+                color: $primary;
+            }
+        }
+    }
+
+    .galeria {
+        position: relative;
+
+        .owl-carousel {
+            .owl-stage-outer {
+                .owl-stage {
+                    >div {
+                        opacity: 0.34;
+                        @include transition;
+                    }
+
+                    >div.active {
+                        opacity: 1;
+                    }
+                }
+            }
+            .owl-nav {
+                position: static;
+                width: 100%;
+                justify-content: center;
+                transform: translateY(0%);
+                margin-top: 32px;
+                gap: 1rem;
+
+                .owl-prev, .owl-next {
+                    background: none;
+                    color: #adadad;
+                }
+
+                >span {
+                    color: #adadad;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: $f6;
+                }
+            }
+        }
+    }
+
+    .relacionados {
+        @include flex(column, center, center);
+        gap: 32px;
+        background-color: #f4f4f4;
+        width: 100vw;
+        padding: 48px 0px;
+
+        >h3 {
+            text-transform: uppercase;
+            font-weight: 500;
+
+            span {
+                font-weight: 300;
+            }
+        }
+
+        .cards-relacionados {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 12px;
+
+            .card {
+                position: relative;
+                text-decoration: none;
+                color: $primary;
+
+                img {
+                    width: 100%;
+                }
+
+                h3 {
+                    background-color: $white;
+                    font-weight: 500;
+                    padding: 8px;
+                    text-transform: uppercase;
+                    position: absolute;
+                    bottom: 12%;
+                }
+            }
+        }
+
+        >a {
+            color: #adadad;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: $f6;
+        }
+
+        select {
+            margin-top: -1rem;
+            text-transform: uppercase;
+            background: none;
+            border: 2px solid #dcdcdc;
+            padding: 6px;
+            border-radius: 20px;
+            font-size: $f6;
+            color: #adadad;
+            outline: none;
+            cursor: pointer;
+            text-align-last: center;
+
+            option {
+                text-align: center;
+            }
+        }
+    }
+
+    @include tablet {
+        .sobre-projeto {
+            flex-direction: column;
+
+            .detalhes-tecnicos, .texto-sobre {
+                transform: translateY(0%);
+                width: 100%;
+                max-width: 800px;
+            }
+
+            .texto-sobre {
+                min-height: fit-content;
+                padding: 32px 0px;
+
+                h2, p {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+
+        .relacionados {
+            .cards-relacionados {
+                grid-template-columns: 1fr;
+                justify-items: center;
+
+                .card {
+                    max-width: 600px;
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        .sobre-projeto {
+            .texto-sobre {
+                h2 {
+                    font-size: $f1-mb;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
 .post-type-archive-projetos {
     header, .mobile-header {
         nav {
