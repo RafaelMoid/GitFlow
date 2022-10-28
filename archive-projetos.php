@@ -5,7 +5,7 @@
         <span>projetos</span><br>
         light design portugal
     </h1>
-    <ul class="categorias">
+    <ul class="categorias" data-aos="fade" data-aos-duration="2000">
         <li id="btShowAll" class="active">Todos</li>
         <?php
             $categories = get_categories(); // lista categorias com atributo personalizado (data-category)
@@ -13,7 +13,7 @@
             <li data-category="<?php echo strtolower($cat->slug); ?>"><?php echo $cat->cat_name; ?></li>
         <?php endif; } ?>
     </ul>
-    <section class="projetos">
+    <section class="projetos" data-aos="fade-up" data-aos-duration="1000">
         <?php if(have_posts()) : while(have_posts()) : the_post(); ?> <!-- cria os cards também com atributo personalizado (data-category) -->
         <a href="<?php the_permalink(); ?>" class="projeto-card" data-category="<?php
             $category_detail=get_the_category(get_the_ID());
@@ -31,5 +31,14 @@
 </main>
 
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/projetos.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    window.addEventListener('load', function() {
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+    });
+</script>
 
 <?php get_footer(); ?>

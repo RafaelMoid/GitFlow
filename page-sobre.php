@@ -9,7 +9,7 @@
         <span>about us</span><br>
         light design portugal
     </h1>
-    <p>
+    <p data-aos="fade">
         Fundada em 1974 no Rio de Janeiro, a Light Design produz equipamentos de iluminação e
         desenvolve projectos luminotécnicos de pequeno, médio e grande portes, oferecendo suporte
         aos profissionais do setor. Atua em todas as fases do processo: cria peças exclusivas, fabrica,
@@ -17,14 +17,14 @@
         do mercado. Com produção local desde 2006, a Light Design possui showroom em Lisboa,
         dispondo de experiente equipe de lighting designers e instaladores.
     </p>
-    <section class="galeria">
+    <section class="galeria" data-aos="fade-up" data-aos-offset="0">
         <div class="owl-carousel">
             <?php if(have_rows('sobre_galeria')) : while(have_rows('sobre_galeria')) : the_row(); ?>
             <img src="<?php the_sub_field('imagem'); ?>" alt="<?php the_sub_field('descricao'); ?>">
             <?php endwhile; endif; ?>
         </div>
     </section>
-    <section class="quote">
+    <section class="quote" data-aos="fade" data-aos-offset="100">
         <p>
             Fundada em 1974 no Rio de Janeiro, a Light Design produz equipamentos de iluminação e desenvolve projectos
             luminotécnicos de pequeno, médio e grande portes, oferecendo suporte aos profissionais do setor. Atua em
@@ -46,5 +46,14 @@
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery-3.6.1.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/owl.carousel.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/sobre.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    window.addEventListener('load', function() {
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+    });
+</script>
 
 <?php get_footer(); ?>

@@ -6,8 +6,8 @@
         <span>projetos</span><br>
         <?php the_title(); ?>
     </h1>
-    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Imagem destaque do projeto">
-    <section class="sobre-projeto">
+    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Imagem destaque do projeto" data-aos="fade">
+    <section class="sobre-projeto" data-aos="fade-up">
         <div class="texto-sobre">
             <h2>
                 <span>sobre</span> o projeto
@@ -41,7 +41,7 @@
             <?php endwhile; endif; ?>
         </div>
     </section>
-    <section class="relacionados">
+    <section class="relacionados" data-aos="fade-up">
         <h3><span>projetos</span> relacionados</h3>
         <div class="cards-relacionados container">
             <?php
@@ -107,6 +107,15 @@
     let span = document.createElement('span');
     span.innerHTML = 'photo gallery';
     navDiv.insertBefore(span, navDiv.children[1]);
+    });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    window.addEventListener('load', function() {
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
     });
 </script>
 <?php get_footer(); ?>

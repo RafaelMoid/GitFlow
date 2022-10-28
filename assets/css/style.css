@@ -647,9 +647,14 @@ main.contato .ctt-wrapper #wrapper-teste #form-wrapper-left input {
   height: 36px;
   background: #F9F8F6;
   border: 1px solid #E9E9E9;
-  box-shadow: 0px 0px 0px 2px #F5F5F5;
+  box-shadow: 0px 0px 2px #F5F5F5;
   border-radius: 4px;
   margin: 11px 0 11px 0;
+  transition: all ease-in-out 0.4s;
+}
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-left input:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right {
   width: 50%;
@@ -663,8 +668,17 @@ main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right textarea {
   width: 100%;
   height: 300px;
   background: #F9F8F6;
-  border: 1px solid #BCB5AA;
+  border: 1px solid #e9e9e9;
   border-radius: 4px;
+  resize: none;
+  transition: all ease-in-out 0.4s;
+}
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right textarea:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right label {
+  cursor: pointer;
 }
 main.contato .ctt-wrapper #wrapper-teste #form-wrapper-right #contact-btn-wrapper {
   margin-top: 36px;
@@ -885,6 +899,9 @@ main.videos .videos-wrapper .wrapper-videos2 {
   cursor: pointer;
   transition: all ease-in-out 0.4s;
 }
+.interna-projetos .categorias li:hover {
+  background-color: #d6fff6;
+}
 .interna-projetos .categorias li.active {
   background-color: #5accb1;
   border-color: #5accb1;
@@ -901,6 +918,8 @@ main.videos .videos-wrapper .wrapper-videos2 {
 .interna-projetos .projetos .projeto-card {
   width: 100%;
   position: relative;
+  overflow: hidden;
+  height: fit-content;
 }
 .interna-projetos .projetos .projeto-card h2 {
   background-color: #FFF;
@@ -914,6 +933,11 @@ main.videos .videos-wrapper .wrapper-videos2 {
 }
 .interna-projetos .projetos .projeto-card img {
   width: 100%;
+  transform: scale(1.02);
+  transition: all ease-in-out 0.4s;
+}
+.interna-projetos .projetos .projeto-card:hover img {
+  transform: scale(1.08);
 }
 .interna-projetos .projetos .hide {
   display: none;
@@ -1091,9 +1115,12 @@ main.videos .videos-wrapper .wrapper-videos2 {
   position: relative;
   text-decoration: none;
   color: #2E3934;
+  overflow: hidden;
 }
 .interna-projeto .relacionados .cards-relacionados .card img {
   width: 100%;
+  transform: scale(1.02);
+  transition: all ease-in-out 0.4s;
 }
 .interna-projeto .relacionados .cards-relacionados .card h3 {
   background-color: #FFF;
@@ -1102,6 +1129,9 @@ main.videos .videos-wrapper .wrapper-videos2 {
   text-transform: uppercase;
   position: absolute;
   bottom: 12%;
+}
+.interna-projeto .relacionados .cards-relacionados .card:hover img {
+  transform: scale(1.08);
 }
 .interna-projeto .relacionados > a {
   color: #adadad;
