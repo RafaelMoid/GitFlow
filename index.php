@@ -14,11 +14,13 @@
           <article class="content-blog-article">
             <a href="<?php the_permalink(); ?>"><img class="thumb-post-banco" src="<?php echo get_the_post_thumbnail_url() ?>" /></a>
             <h2 class="thumb-title-banco">
-              <a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h2>
             <h5 class="excerpt-banco"><?php the_excerpt(); ?></h5>
             <h6 class="saiba-mais-banco">
-              <a class="saiba-mais-banco-a" href="<?php the_permalink(); ?>" >SAIBA MAIS</a>
+              <a class="saiba-mais-banco-a" href="<?php the_permalink(); ?>">
+                <?php the_tags(); ?>
+              </a>
             </h6>
             <hr class="line-post">
           </article>
@@ -29,21 +31,28 @@
       </div>
     </div>
     <aside class="aside-container">
+      <!-- Primeira Caixa do Aside  -->
       <div>
         <div class="cat-container">
-          <h4>CATEGORIAS</h4>
-          <div class="linha-aside"></div>
-          <ul class="categorias-lista">
+          <div class="title-wrapper-aside">
+            <h4>CATEGORIAS</h4>
+            <div class="linha-aside"></div>
+          </div>
+          <ol class="categorias-lista">
             <li>
               <?php wp_list_categories(array(
                 'title_li' => ''
               )); ?>
             </li>
-          </ul>
+          </ol>
         </div>
       </div>
+      <!-- Segunda caixa do Aside -->
       <div class="ultimas-noticias-container">
-        <h4 class="h4-aside-config">últimas notícias</h4>
+        <div class="title-wrapper-aside2">
+          <h4 class="h4-aside-config">últimas notícias</h4>
+          <div class="linha-aside"></div>
+        </div>
         <ul class="categorias-lista-2">
           <li class="li-lista-2">
             <?php $args = array(
@@ -59,6 +68,20 @@
             <?php endif; ?>
           </li>
         </ul>
+      </div>
+      <!-- Terceira caixa do Aside -->
+      <div>
+        <div class="tag-container">
+          <ul class="categorias-lista">
+            <?php
+            $tags = get_tags();
+            if ($tags) :
+              foreach ($tags as $tag) : ?>
+                <li><a href="<?php echo esc_url(get_tag_link($tag->term_id)); ?>" title="<?php echo esc_attr($tag->name); ?>"><?php echo esc_html($tag->name); ?></a></li>
+              <?php endforeach; ?>
+            <?php endif; ?>
+          </ul>
+        </div>
       </div>
     </aside>
   </section>
