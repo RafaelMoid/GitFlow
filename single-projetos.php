@@ -86,7 +86,7 @@
         nav: true,
         dots: false,
         loop: true,
-        mouseDrag: false,
+        mouseDrag: true,
         navText: ['<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/arrow-left.png">', '<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/arrow-right.png">'],
         stagePadding: 48,
         margin: 8,
