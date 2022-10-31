@@ -19,7 +19,7 @@ header {
                     @include transition;
 
                     &:hover {
-                        opacity: 0.34;
+                        color: #cecece;
                     }
                 }
             }
@@ -153,7 +153,7 @@ header {
                     @include transition;
 
                     &:hover {
-                        opacity: 0.34;
+                        color: #cecece;
                     }
                 }
             }

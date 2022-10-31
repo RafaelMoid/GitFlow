@@ -187,8 +187,9 @@ main.contato {
     nav {
       ul {
         li:nth-child(7) {
-          opacity: 0.34;
-          pointer-events: none;
+          a {
+            color: #cecece;
+            }
         }
       }
     }

@@ -77,8 +77,9 @@ main.videos {
     nav {
       ul {
         li:nth-child(6) {
-          opacity: 0.34;
-          pointer-events: none;
+          a {
+            color: #cecece;
+            }
         }
       }
     }

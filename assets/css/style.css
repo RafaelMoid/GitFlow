@@ -152,7 +152,7 @@ header nav ul li a {
   transition: all ease-in-out 0.4s;
 }
 header nav ul li a:hover {
-  opacity: 0.34;
+  color: #cecece;
 }
 header .links {
   display: flex;
@@ -270,7 +270,7 @@ header .brochure-newsletter span {
   transition: all ease-in-out 0.4s;
 }
 .mobile-header nav ul li a:hover {
-  opacity: 0.34;
+  color: #cecece;
 }
 .mobile-header .links {
   display: flex;
@@ -815,10 +815,9 @@ footer .contacts .social a:first-child {
   display: none;
 }
 
-.page-template-page-home header nav ul li:nth-child(1),
-.page-template-page-home .mobile-header nav ul li:nth-child(1) {
-  opacity: 0.34;
-  pointer-events: none;
+.page-template-page-home header nav ul li:nth-child(1) a,
+.page-template-page-home .mobile-header nav ul li:nth-child(1) a {
+  color: #cecece;
 }
 
 .interna-equipa .equipa-cards {
@@ -898,9 +897,8 @@ footer .contacts .social a:first-child {
   }
 }
 
-.page-template-page-equipa header nav ul li:nth-child(3), .page-template-page-equipa .mobile-header nav ul li:nth-child(3) {
-  opacity: 0.34;
-  pointer-events: none;
+.page-template-page-equipa header nav ul li:nth-child(3) a, .page-template-page-equipa .mobile-header nav ul li:nth-child(3) a {
+  color: #cecece;
 }
 
 main.contato {
@@ -1068,10 +1066,9 @@ main.contato iframe {
   margin-bottom: 54px;
 }
 
-.page-template-page-contato header nav ul li:nth-child(7),
-.page-template-page-contato .mobile-header nav ul li:nth-child(7) {
-  opacity: 0.34;
-  pointer-events: none;
+.page-template-page-contato header nav ul li:nth-child(7) a,
+.page-template-page-contato .mobile-header nav ul li:nth-child(7) a {
+  color: #cecece;
 }
 
 .interna-sobre > p {
@@ -1124,9 +1121,8 @@ main.contato iframe {
   }
 }
 
-.page-template-page-sobre header nav ul li:nth-child(2), .page-template-page-sobre .mobile-header nav ul li:nth-child(2) {
-  opacity: 0.34;
-  pointer-events: none;
+.page-template-page-sobre header nav ul li:nth-child(2) a, .page-template-page-sobre .mobile-header nav ul li:nth-child(2) a {
+  color: #cecece;
 }
 
 main.videos .videos-header {
@@ -1196,10 +1192,9 @@ main.videos .videos-wrapper .wrapper-videos2 {
   }
 }
 
-.page-template-page-videos header nav ul li:nth-child(6),
-.page-template-page-videos .mobile-header nav ul li:nth-child(6) {
-  opacity: 0.34;
-  pointer-events: none;
+.page-template-page-videos header nav ul li:nth-child(6) a,
+.page-template-page-videos .mobile-header nav ul li:nth-child(6) a {
+  color: #cecece;
 }
 
 .interna-projetos .categorias {
@@ -1518,9 +1513,8 @@ main.videos .videos-wrapper .wrapper-videos2 {
   }
 }
 
-.post-type-archive-projetos header nav ul li:nth-child(4), .post-type-archive-projetos .mobile-header nav ul li:nth-child(4), .single-projetos header nav ul li:nth-child(4), .single-projetos .mobile-header nav ul li:nth-child(4) {
-  opacity: 0.34;
-  pointer-events: none;
+.post-type-archive-projetos header nav ul li:nth-child(4) a, .post-type-archive-projetos .mobile-header nav ul li:nth-child(4) a, .single-projetos header nav ul li:nth-child(4) a, .single-projetos .mobile-header nav ul li:nth-child(4) a {
+  color: #cecece;
 }
 
 main.blog {
