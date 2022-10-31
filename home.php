@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="blog container">
-  <h1 class="blog-header">CONTATOS </br> <b>LIGHT DESIGN PORTUGAL</b></h1>
+  <h1 class="blog-header">BLOG</br><b>LIGHT DESIGN PORTUGAL</b></h1>
   <p class="blog-sub-titulo" data-aos="fade">
     Se sua empresa necessita de um projeto profissional de iluminação, entre em
     contato conosco e em breve nosso setor comercial retornará sua mensagem.
@@ -14,11 +14,11 @@
           <article class="content-blog-article">
             <a href="<?php the_permalink(); ?>"><img class="thumb-post-banco" src="<?php echo get_the_post_thumbnail_url() ?>" /></a>
             <h2 class="thumb-title-banco">
-              <a href="<?php the_permalink(); ?>" ?><?php the_title(); ?></a>
+              <a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
             </h2>
             <h5 class="excerpt-banco"><?php the_excerpt(); ?></h5>
             <h6 class="saiba-mais-banco">
-              <a class="saiba-mais-banco-a" href="<?php the_permalink(); ?>" ?>SAIBA MAIS</a>
+              <a class="saiba-mais-banco-a" href="<?php the_permalink(); ?>" >SAIBA MAIS</a>
             </h6>
             <hr class="line-post">
           </article>

@@ -14,7 +14,14 @@
         <?php endif; } ?>
     </ul>
     <section class="projetos" data-aos="fade-up" data-aos-duration="1000">
-        <?php if(have_posts()) : while(have_posts()) : the_post(); ?> <!-- cria os cards também com atributo personalizado (data-category) -->
+        <?php
+        $args = array(
+            "posts_per_page" => "-1",
+            "post_type" => "projetos"
+        );
+        $the_query = new WP_Query($args);
+        ?>
+        <?php if($the_query->have_posts()) : while($the_query->have_posts()) : $the_query->the_post(); ?> <!-- cria os cards também com atributo personalizado (data-category) -->
         <a href="<?php the_permalink(); ?>" class="projeto-card" data-category="<?php
             $category_detail=get_the_category(get_the_ID());
             foreach($category_detail as $cd){
