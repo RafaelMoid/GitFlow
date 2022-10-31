@@ -155,6 +155,20 @@ $f4-mb: 16px;
                     opacity: 0.34;
                 }
 
+                @include tablet {
+                    gap: 16px;
+                    button {
+                        width: 42px;
+                    }
+                  }
+          
+                  @include mobile {
+                    gap: 10px;
+                    button {
+                        width: 32px;
+                    }
+                  }
+
                 .active {
                     opacity: 1;
                 }
