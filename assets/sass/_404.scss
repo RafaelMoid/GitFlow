@@ -1,0 +1,10 @@
+body.error404 {
+    @include flex(column, space-between, center);
+    min-height: 95vh;
+
+    .interna-404 {
+        p {
+            font-size: $f3;
+        }
+    }
+}

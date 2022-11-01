@@ -2246,6 +2246,17 @@ body.single .mobile-header nav ul li:nth-child(5) a {
   color: #cecece;
 }
 
+body.error404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 95vh;
+}
+body.error404 .interna-404 p {
+  font-size: 25px;
+}
+
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
