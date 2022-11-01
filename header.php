@@ -60,9 +60,9 @@
             </div>
         </div>
         <div class="brochure-newsletter">
-            <a href="">brochure</a>
+            <a href="<?php bloginfo('url'); ?>#brochure">brochure</a>
             <span>|</span>
-            <a href="">newsletter</a>
+            <a href="#newsletter">newsletter</a>
         </div>
         <i id="btOpenMenu" class="fa-solid fa-bars"></i>
     </header>

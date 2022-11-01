@@ -1,5 +1,5 @@
 <footer class="container">
-    <div class="newsletter">
+    <div id="newsletter" class="newsletter">
         <h3>newsletter <span>sign up</span></h3>
         <form>
             <div class="input-wrapper">

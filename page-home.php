@@ -104,7 +104,7 @@
         </div>
         <a href="<?php bloginfo('url'); ?>/blog">ver todas as notícias <i class="fa-solid fa-arrow-right"></i></a>
     </section>
-    <section class="brochure">
+    <section id="brochure" class="brochure">
         <a href="<?php bloginfo('url'); ?>/contactos" class="brochure-card">
             <div class="card-texto">
                 <h3>find <strong>out more</strong></h3>
