@@ -8,9 +8,12 @@
     <ul class="categorias" data-aos="fade" data-aos-duration="2000">
         <li id="btShowAll" class="active">Todos</li>
         <?php
-            $categories = get_categories(); // lista categorias com atributo personalizado (data-category)
-            foreach($categories as $cat) { if($cat->cat_name != 'Uncategorized') : ?>
-            <li data-category="<?php echo strtolower($cat->slug); ?>"><?php echo $cat->cat_name; ?></li>
+            $terms = get_terms( array(
+                'taxonomy' => 'tipo',
+                'hide_empty' => true
+            ) ); // lista categorias com atributo personalizado (data-category)
+            foreach($terms as $cat) { if($cat->cat_name != 'Uncategorized') : ?>
+            <li data-category="<?php echo strtolower($cat->slug); ?>"><?php echo $cat->name; ?></li>
         <?php endif; } ?>
     </ul>
     <section class="projetos" data-aos="fade-up" data-aos-duration="1000">
@@ -23,7 +26,7 @@
         ?>
         <?php if($the_query->have_posts()) : while($the_query->have_posts()) : $the_query->the_post(); ?> <!-- cria os cards também com atributo personalizado (data-category) -->
         <a href="<?php the_permalink(); ?>" class="projeto-card" data-category="<?php
-            $category_detail=get_the_category(get_the_ID());
+            $category_detail=get_the_terms(get_the_ID(), 'tipo');
             foreach($category_detail as $cd){
             echo strtolower($cd->slug);
             }
@@ -46,6 +49,19 @@
             duration: 1000
         });
     });
+</script>
+<script>
+    function handleUrl() {
+    const categorySlug = window.location.href.replace('<?php bloginfo("url"); ?>/projetos', '').replace('/', '').replace('#', '');
+
+    for(i = 1; i < categoriesList.length; i++) {
+        if(categoriesList[i].dataset.category == categorySlug) {
+            categoriesList[i].click();
+        }
+    }
+}
+
+handleUrl();
 </script>
 
 <?php get_footer(); ?>

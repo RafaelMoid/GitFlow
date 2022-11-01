@@ -66,9 +66,12 @@
         <select id="selectCategory">
             <option>selecione por categoria</option>
             <?php
-            $categories = get_categories(); // lista categorias com atributo personalizado (data-category)
-            foreach($categories as $cat) { if($cat->cat_name != 'Uncategorized') : ?>
-            <option value="<?php bloginfo('url'); ?>/projetos#<?php echo $cat->slug ?>"><?php echo $cat->cat_name; ?>
+            $terms = get_terms( array(
+                'taxonomy' => 'tipo',
+                'hide_empty' => true
+            ) ); // lista categorias com atributo personalizado (data-category)
+            foreach($terms as $cat) { if($cat->cat_name != 'Uncategorized') : ?>
+            <option value="<?php bloginfo('url'); ?>/projetos#<?php echo $cat->slug ?>"><?php echo $cat->name; ?>
             </option>
             <?php endif; } ?>
         </select>

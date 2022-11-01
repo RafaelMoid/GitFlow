@@ -13,6 +13,8 @@ main.blog {
         font-size: $f1;
         font-weight: 300;
         line-height: 54.86px;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
 
         @include mobile {
             font-size: $f1-mb;
@@ -26,10 +28,11 @@ main.blog {
 
     .blog-sub-titulo {
         font-size: $f4;
-        margin-top: 3rem;
+        margin-top: 2rem;
         text-align: center;
         padding: 0 15%;
         line-height: 24px;
+        margin-bottom: 3rem;
 
         @include mobile {
             font-size: $f4-mb;
@@ -79,6 +82,10 @@ main.blog {
                         color: #727377;
                         text-decoration: none;
                         font-weight: 300;
+
+                        @include mobile {
+                            font-size: $f3-mb;
+                        }
                     }
                 }
 
@@ -227,7 +234,7 @@ main.blog {
 
                 .title-wrapper-aside2 {
                     display: flex;
-                    justify-content: center;
+                    justify-content: space-between;
                     align-items: center;
                     flex-direction: row;
 
@@ -238,9 +245,7 @@ main.blog {
                     }
 
                     .linha-aside {
-                        display: flex;
-                        justify-content: center;
-                        width: 35%;
+                        width: calc(100% - 190px);
                         border: 1px solid #E0E0E0;
                         margin: 8px 0 8px 8px;
                     }
@@ -314,5 +319,20 @@ main.blog {
                 }
             }
         }
+    }
+}
+
+body.blog, body.category, body.tag {
+    header,
+    .mobile-header {
+      nav {
+        ul {
+          li:nth-child(5) {
+            a {
+              color: #cecece;
+            }
+          }
+        }
+      }
     }
 }

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="blog container">
-  <h1 class="blog-header">BLOG</br><b>LIGHT DESIGN PORTUGAL</b></h1>
+  <h1 class="blog-header">#<?php single_tag_title(); ?></br><b>LIGHT DESIGN PORTUGAL</b></h1>
   <div class="blog-linha"></div>
   <!-- SESSÃO DE CONTEUDO -->
   <section class="content-blog-section" data-aos="fade-up">

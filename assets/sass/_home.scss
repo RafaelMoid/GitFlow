@@ -54,23 +54,24 @@
             text-overflow: clip;
             max-width: 0px;
             transition: ease-out 1200ms;
-            
-          p {
-            font-size: $f2;
-            background-color: $white;
-            text-transform: uppercase;
-            padding: 8px;
-            font-weight: 300;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: clip;
-          }
+
+            p {
+              font-size: $f2;
+              background-color: $white;
+              text-transform: uppercase;
+              padding: 8px;
+              font-weight: 300;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: clip;
+            }
           }
         }
 
         #firstBannerRight {
           transition: 800ms;
           transform: translateX(103%);
+
           >div {
             top: 43%;
             left: -375px;
@@ -81,6 +82,7 @@
             z-index: 500;
             visibility: hidden;
           }
+
           p {
             font-size: $f3;
             text-transform: uppercase;
@@ -94,6 +96,7 @@
               font-weight: 600;
             }
           }
+
           span {
             bottom: -60px;
           }
@@ -162,15 +165,17 @@
 
       @include tablet {
         gap: 16px;
+
         button {
-            width: 42px;
+          width: 42px;
         }
       }
 
       @include mobile {
         gap: 10px;
+
         button {
-            width: 32px;
+          width: 32px;
         }
       }
 
@@ -184,6 +189,7 @@
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    margin-top: 100px;
 
     >h2 {
       font-size: $f1;
@@ -194,6 +200,7 @@
       margin-top: 48px;
       text-transform: uppercase;
       padding: 16px;
+
       span {
         font-weight: 300;
       }
@@ -203,6 +210,7 @@
         padding-bottom: 16px;
       }
     }
+
     >p {
       font-size: $f4;
       max-width: 1000px;
@@ -222,100 +230,411 @@
       position: relative;
 
       .owl-carousel {
-          .item {
-            position: relative;
+        .item {
+          position: relative;
+          overflow: hidden;
+
+          .ficha {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background-color: #efefef;
+            padding: 16px;
+            @include flex(column, center, flex-start);
+            gap: 16px;
+            text-transform: uppercase;
+
+            >span {
+              color: #adadad;
+              text-decoration: none;
+              font-size: $f6;
+            }
+
+            >h3 {
+              font-weight: 600;
+              font-size: $f4;
+            }
+
+            .lista-infos {
+              list-style-type: none;
+              font-size: $f5;
+              font-weight: 500;
+            }
+
+            >a {
+              color: $black;
+              text-decoration: none;
+              font-size: $f6;
+              font-weight: 600;
+            }
+          }
+
+          img,
+          .ficha {
+            cursor: pointer;
+          }
+
+          @include tablet {
+            @include flex(column, center, center);
+            gap: 8px;
+
+            img {
+              width: 100%;
+            }
+
             .ficha {
-              position: absolute;
-              bottom: 8px;
-              right: 8px;
-              background-color: #efefef;
-              padding: 16px;
-              @include flex(column, center, flex-start);
-              gap: 16px;
-              text-transform: uppercase;
-
-              >span {
-                color: #adadad;
-                text-decoration: none;
-                font-size: $f6;
-              }
-
-              >h3 {
-                font-weight: 600;
-                font-size: $f4;
-              }
-
-              .lista-infos {
-                list-style-type: none;
-                font-size: $f5;
-                font-weight: 500;
-              }
-
-              >a {
-                color: $black;
-                text-decoration: none;
-                font-size: $f6;
-                font-weight: 600;
-              }
-            }
-
-            img, .ficha {
-              cursor: pointer;
-            }
-
-            @include tablet {
-              @include flex(column, center, center);
-              gap: 8px;
-              .ficha {
-                position: static;
-                width: 100%;
-              }
-            }
-          }
-          .owl-stage-outer {
-              .owl-stage {
-                  >div {
-                      opacity: 0.34;
-                      @include transition;
-                  }
-
-                  >div.active {
-                      opacity: 1;
-                      box-shadow: 0px 0px 0px white;
-                  }
-              }
-          }
-          .owl-nav {
               position: static;
               width: 100%;
-              justify-content: center;
-              transform: translateY(0%);
-              margin-top: 32px;
-              gap: 1rem;
-              @include flex(row, center, center);
-
-              @include mobile {
-                gap: 8px;
-              }
-
-              .owl-prev, .owl-next {
-                  background: none;
-                  color: #adadad;
-              }
-
-              >a {
-                  color: #adadad;
-                  text-decoration: none;
-                  text-transform: uppercase;
-                  font-size: $f6;
-                  transform: translateY(-20%);
-              }
+            }
           }
+
+          @include mobile {
+            gap: 0px;
+
+            img {
+              height: 360px;
+              width: auto;
+            }
+
+            .ficha {
+              position: static;
+              width: fit-content;
+              margin-top: -120px;
+            }
+          }
+        }
+
+        .owl-stage-outer {
+          .owl-stage {
+            >div {
+              opacity: 0.34;
+              @include transition;
+            }
+
+            >div.active {
+              opacity: 1;
+              box-shadow: 0px 0px 0px white;
+              &:hover {
+                img {
+                  transform: scale(1.05);
+                }
+              }
+    
+              img {
+                transition: all 1000ms;
+              }
+            }
+          }
+        }
+
+        .owl-nav {
+          position: static;
+          width: 100%;
+          justify-content: center;
+          transform: translateY(0%);
+          margin-top: 32px;
+          gap: 1rem;
+          @include flex(row, center, center);
+
+          @include mobile {
+            margin-top: 8px;
+            gap: 8px;
+          }
+
+          .owl-prev,
+          .owl-next {
+            background: none;
+            color: #adadad;
+          }
+
+          >a {
+            color: #adadad;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: $f6;
+            transform: translateY(-20%);
+          }
+        }
       }
-  }
+    }
   }
 
-  .news, .brochure {
+  .news {
+    @include flex(column, center, center);
+    gap: 16px;
+
+    h2 {
+      font-size: $f1;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin: 32px auto;
+      margin-top: 100px;
+      width: 100%;
+      max-width: 900px;
+      text-align: center;
+
+      span {
+        font-weight: 300;
+      }
+
+      @include mobile {
+        font-size: $f1-mb;
+      }
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 32px;
+      grid-template-areas:
+        "card-1 card-1 card-1 card-2 card-2 card-2 card-2"
+        "card-1 card-1 card-1 card-3 card-3 card-4 card-4";
+      max-height: 700px;
+
+      .card-1 {
+        grid-area: card-1;
+      }
+
+      .card-2 {
+        grid-area: card-2;
+      }
+
+      .card-3 {
+        grid-area: card-3;
+      }
+
+      .card-4 {
+        grid-area: card-4;
+      }
+
+      .card-1 {
+        height: 100%;
+        background-color: $primary;
+        max-width: 100%;
+        overflow: hidden;
+        @include flex(column, space-between, center);
+        text-decoration: none;
+        position: relative;
+
+        img {
+          height: 70%;
+        }
+
+        .card-texto {
+          padding: 24px;
+          height: 30%;
+          @include flex(column, space-between, flex-start);
+          background-color: $primary;
+          position: absolute;
+          bottom: 0px;
+          width: 100%;
+
+          h3 {
+            color: $white;
+            font-weight: 600;
+            font-size: 24px;
+          }
+
+          p {
+            color: $white;
+            font-weight: 400;
+            font-size: 18px;
+          }
+
+          span {
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: $f5
+          }
+        }
+      }
+
+      .card-2 {
+        @include flex(row, flex-start, center);
+        background-color: #adadad;
+        height: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          height: 100%;
+        }
+
+        .card-texto {
+          @include flex(column, space-evenly, flex-start);
+          padding: 24px;
+          width: 45%;
+          position: absolute;
+          background-color: #f4f4f4;
+          height: 100%;
+          right: 0px;
+          color: $primary;
+
+          span {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: $f5;
+          }
+        }
+      }
+
+      .card-3,
+      .card-4 {
+        @include flex(row, center, center);
+        height: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          height: 100%;
+        }
+
+        .card-texto {
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          padding: 24px;
+
+          h3 {
+            color: $white;
+            font-weight: 500;
+            font-size: 24px;
+            margin-bottom: 8px;
+          }
+
+          p {
+            display: none;
+          }
+
+          span {
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: $f5;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
+
+      .card-1,
+      .card-2,
+      .card-3,
+      .card-4 {
+        img {
+          transition: 1000ms;
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.05);
+          }
+        }
+      }
+
+      @include tablet {
+        @include flex(row, center, center);
+        gap: 24px;
+        flex-wrap: wrap;
+        max-height: 3000px;
+
+        .card-1,
+        .card-2,
+        .card-3,
+        .card-4 {
+          width: 44vw;
+          height: 44vw;
+
+          .card-texto {
+            height: fit-content;
+
+            h3 {
+              margin-bottom: 24px;
+            }
+          }
+        }
+
+        .card-1, .card-2 {
+          background: none;
+          img {
+            height: 100%;
+          }
+          .card-texto {
+            background: none;
+            justify-content: center;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+            p {
+              display: none;
+              position: static;
+              height: fit-content;
+            }
+          }
+        }
+
+        .card-3, .card-4 {
+          .card-texto {
+            h3 {
+              font-weight: 600;
+            }
+          }
+        }
+
+        .card-2 {
+          @include flex(column-reverse, space-between, center);
+
+          .card-texto {
+            width: 100%;
+            height: fit-content;
+            color: $white;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+            h3 {
+              font-weight: 600;
+              font-size: 24px;
+              margin-bottom: 24px;
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        .card-1, .card-2, .card-3, .card-4 {
+          width: 95vw;
+          height: 95vw;
+        }
+      }
+
+      @include mobile {
+        .card-4 {
+          display: none;
+        }
+      }
+    }
+
+    >a {
+      margin: 48px auto;
+      font-size: $f5;
+      color: $black;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 600;
+      @include transition;
+
+      &:hover {
+        opacity: 0.34;
+      }
+
+      i {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .brochure {
     img {
       display: none;
     }
@@ -330,7 +649,7 @@
       ul {
         li:nth-child(1) {
           a {
-          color: #cecece;
+            color: #cecece;
           }
         }
       }

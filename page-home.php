@@ -39,7 +39,7 @@
             <?php endwhile; endif; ?>
         </div>
     </section>
-    <section class="projetos">
+    <section class="projetos" data-aos="fade" data-aos-offset="120">
         <h2><span>we create environments</span><br> that light up your world</h2>
         <p>
             Fundada em 1974 no Rio de Janeiro, a Light Design produz equipamentos de iluminação e
@@ -62,7 +62,8 @@
                 <?php if($the_query->have_posts()) : while($the_query->have_posts()) : $the_query->the_post(); ?>
                 <div class="item">
                     <img src="<?php echo get_the_post_thumbnail_url(); ?>"
-                        alt="Imagem destaque do projeto <?php the_title(); ?>" onclick="window.location.href = '<?php the_permalink(); ?>'">
+                        alt="Imagem destaque do projeto <?php the_title(); ?>"
+                        onclick="window.location.href = '<?php the_permalink(); ?>'">
                     <div class="ficha" onclick="window.location.href = '<?php the_permalink(); ?>'">
                         <span>featured project</span>
                         <h3><?php the_field('nome_lugar'); ?></h3>
@@ -78,8 +79,8 @@
             </div>
         </div>
     </section>
-    <section class="news">
-        <h2>latest <strong>news</strong></h2>
+    <section class="news container">
+        <h2><span>latest</span> news</h2>
         <div class="grid-cards">
             <?php
             $args = array(
@@ -89,18 +90,19 @@
             $the_query = new WP_Query($args);
             ?>
             <?php if($the_query->have_posts()) : $i = 1; while($the_query->have_posts()) : $the_query->the_post(); ?>
-            <div class="card-<?php echo $i ?>">
+            <a href="<?php the_permalink(); ?>" class="card-<?php echo $i ?>">
                 <img src="<?php echo get_the_post_thumbnail_url(); ?>">
                 <div class="card-texto">
                     <h3><?php the_title(); ?></h3>
                     <p>
                         <?php the_excerpt(); ?>
                     </p>
-                    <a href="<?php the_permalink(); ?>">more →</a>
+                    <span>more <i class="fa-solid fa-arrow-right"></i></span>
                 </div>
-            </div>
-            <?php endwhile; wp_reset_query(); endif; ?>
+            </a>
+            <?php $i++; endwhile; wp_reset_query(); endif; ?>
         </div>
+        <a href="<?php bloginfo('url'); ?>/blog">ver todas as notícias <i class="fa-solid fa-arrow-right"></i></a>
     </section>
     <section class="brochure">
         <a href="<?php bloginfo('url'); ?>/contactos" class="brochure-card">
@@ -112,7 +114,7 @@
                     as
                     well as more information about us and how we work.
                 </p>
-                <h5>request a brochure →</h5>
+                <h5>request a brochure <i class="fa-solid fa-arrow-right"></i></h5>
             </div>
             <div class="card-img">
                 <img src="<?php the_field('imagem_brochura'); ?>" alt="cabeça de gelo">
@@ -156,7 +158,7 @@ $(document).ready(function() {
         navText: ['<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/arrow-left.png">',
             '<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/arrow-right.png">'
         ],
-        stagePadding: 48,
+        stagePadding: 0,
         margin: 8,
         responsive: {
             601: {
@@ -195,6 +197,15 @@ $(document).ready(function() {
         navDestaque.style.opacity = '1';
         dotsDestaque.style.opacity = '1';
     }, 1500);
+});
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+window.addEventListener('load', function() {
+    AOS.init({
+        once: true,
+        duration: 1000
+    });
 });
 </script>
 
