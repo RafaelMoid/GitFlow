@@ -2088,6 +2088,65 @@ main.blog .content-blog-section .aside-container .tag-container .categorias-list
   content: "#";
 }
 
+.blog-single .blog-linha {
+  width: 95%;
+  margin: 0 auto 46px auto;
+  height: 3px;
+  background-color: #e4e4e4;
+}
+.blog-single .post {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blog-single .post img {
+  width: 100%;
+  max-width: 100%;
+}
+.blog-single .post h2 {
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 8px;
+  margin-top: 24px;
+}
+.blog-single .post small {
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+.blog-single .post p {
+  font-size: 20px;
+  line-height: 1.8rem;
+  margin-bottom: 20px;
+}
+.blog-single .post ul {
+  width: 90%;
+  line-height: 1.8rem;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.blog-single .post a {
+  color: #000;
+}
+@media screen and (max-width: 600px) {
+  .blog-single .post h2 {
+    font-size: 32px;
+  }
+  .blog-single .post p, .blog-single .post ul {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+  }
+  .blog-single .post ul {
+    margin-left: 1rem;
+  }
+}
+
 body.blog header nav ul li:nth-child(5) a,
 body.blog .mobile-header nav ul li:nth-child(5) a, body.category header nav ul li:nth-child(5) a,
 body.category .mobile-header nav ul li:nth-child(5) a, body.tag header nav ul li:nth-child(5) a,

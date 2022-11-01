@@ -322,6 +322,76 @@ main.blog {
     }
 }
 
+.blog-single {
+
+    .blog-linha {
+        width: 95%;
+        margin: 0 auto 46px auto;
+        height: 3px;
+        background-color: #e4e4e4;
+    }
+
+    .post {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+
+        @include flex(column, center, center);
+
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        h2 {
+            font-size: $f2;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 8px;
+            margin-top: 24px;
+        }
+
+        small {
+            font-size: $f5;
+            margin-bottom: 32px;
+        }
+
+        p {
+            font-size: $f4;
+            line-height: 1.8rem;
+            margin-bottom: $f4;
+        }
+
+        ul {
+            width: 90%;
+            line-height: 1.8rem;
+            font-size: $f4;
+            margin-bottom: $f4;
+        }
+
+        a {
+            color: $black;
+        }
+
+        @include mobile {
+            h2 {
+                font-size: $f2-mb;
+            }
+
+            p, ul {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+                line-height: 1.4rem;
+            }
+
+            ul {
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
 body.blog, body.category, body.tag {
     header,
     .mobile-header {
