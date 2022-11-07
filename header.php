@@ -48,7 +48,7 @@
             </ul>
         </nav>
         <div class="links">
-            <span class="bt-language">english</span>
+            <?php echo do_shortcode('[gtranslate]'); ?>
             <a href="tel:+351211914676">+351 211 914 676</a>
             <div class="social">
                 <a href="https://instagram.com" target="_blank">
@@ -62,7 +62,7 @@
         <div class="brochure-newsletter">
             <a href="<?php bloginfo('url'); ?>#brochure">brochure</a>
             <span>|</span>
-            <a href="#newsletter">newsletter</a>
+            <a href="<?php bloginfo('url'); ?>#newsletter">newsletter</a>
         </div>
         <i id="btOpenMenu" class="fa-solid fa-bars"></i>
     </header>
@@ -95,7 +95,7 @@
             </ul>
         </nav>
         <div class="links">
-            <span class="bt-language">english</span>
+            <?php echo do_shortcode('[gtranslate]'); ?>
             <a href="tel:+351211914676">+351 211 914 676</a>
             <div class="social">
                 <a href="https://instagram.com" target="_blank">

@@ -161,12 +161,15 @@ header .links {
   align-items: center;
   gap: 24px;
 }
-header .links .bt-language {
+header .links a.bt-language {
   color: #2E3934;
   opacity: 0.34;
   text-transform: capitalize;
   font-weight: 600;
   font-size: 12px;
+}
+header .links a.active-language {
+  display: none;
 }
 header .links > a {
   font-size: 14px;
@@ -279,16 +282,15 @@ header .brochure-newsletter span {
   align-items: center;
   gap: 8px;
 }
-.mobile-header .links .bt-language {
-  text-transform: capitalize;
+.mobile-header .links a.bt-language {
   color: #2E3934;
   opacity: 0.34;
-  transition: all ease-in-out 0.4s;
-  font-size: 14px;
+  text-transform: capitalize;
   font-weight: 600;
+  font-size: 12px;
 }
-.mobile-header .links .bt-language:hover {
-  opacity: 1;
+.mobile-header .links a.active-language {
+  display: none;
 }
 .mobile-header .links > a {
   text-decoration: none;

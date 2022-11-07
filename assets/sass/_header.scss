@@ -30,12 +30,16 @@ header {
         @include flex(row, center, center);
         gap: 24px;
 
-        .bt-language {
+        a.bt-language {
             color: $primary;
             opacity: 0.34;
             text-transform: capitalize;
             font-weight: 600;
             font-size: $f6;
+        }
+
+        a.active-language {
+            display: none;
         }
 
         >a {
@@ -164,17 +168,16 @@ header {
         @include flex(column, center, center);
         gap: 8px;
 
-        .bt-language {
-            text-transform: capitalize;
+        a.bt-language {
             color: $primary;
             opacity: 0.34;
-            @include transition;
-            font-size: $f5;
+            text-transform: capitalize;
             font-weight: 600;
+            font-size: $f6;
+        }
 
-            &:hover {
-                opacity: 1;
-            }
+        a.active-language {
+            display: none;
         }
 
         >a {

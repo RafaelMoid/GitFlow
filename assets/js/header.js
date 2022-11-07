@@ -26,3 +26,26 @@ window.addEventListener('scroll', () => {
 btScrollUp.addEventListener('click', () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
 });
+
+// handle language btn
+
+const desktopDivLinks = document.querySelector('header .links');
+const mobileDivLinks = document.querySelector('.mobile-header .links');
+
+function languageChange() {
+    desktopDivLinks.children[0].classList.toggle('active-language');
+    mobileDivLinks.children[0].classList.toggle('active-language');
+    desktopDivLinks.children[1].classList.toggle('active-language');
+    mobileDivLinks.children[1].classList.toggle('active-language');
+}
+
+for(i = 0; i < 2; i++) {
+    desktopDivLinks.children[i].classList.add('bt-language');
+    mobileDivLinks.children[i].classList.add('bt-language');
+
+    desktopDivLinks.children[i].addEventListener('click', languageChange);
+    mobileDivLinks.children[i].addEventListener('click', languageChange);
+}
+
+desktopDivLinks.children[0].classList.add('active-language');
+mobileDivLinks.children[0].classList.add('active-language');
