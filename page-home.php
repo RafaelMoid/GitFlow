@@ -126,25 +126,25 @@
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery-3.6.1.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/owl.carousel.min.js"></script>
 <script>
-$(document).ready(function() {
-    const firstBannerLeft = document.getElementById('firstBannerLeft');
-    const firstBannerRight = document.getElementById('firstBannerRight');
+// $(document).ready(function() {
+//     const firstBannerLeft = document.getElementById('firstBannerLeft');
+//     const firstBannerRight = document.getElementById('firstBannerRight');
 
-    setTimeout(() => {
-        firstBannerLeft.style.transform = 'translateX(0%)';
-        firstBannerRight.style.transform = 'translateX(0%)';
-    }, 300);
+//     setTimeout(() => {
+//         firstBannerLeft.style.transform = 'translateX(0%)';
+//         firstBannerRight.style.transform = 'translateX(0%)';
+//     }, 300);
 
-    setTimeout(() => {
-        firstBannerLeft.children[1].style.maxWidth = '400px';
-        firstBannerRight.children[1].style.visibility = 'visible';
-        firstBannerRight.children[1].style.left = '0px';
-    }, 1100);
+//     setTimeout(() => {
+//         firstBannerLeft.children[1].style.maxWidth = '400px';
+//         firstBannerRight.children[1].style.visibility = 'visible';
+//         firstBannerRight.children[1].style.left = '0px';
+//     }, 1100);
 
-    setTimeout(() => {
-        firstBannerRight.children[2].style.bottom = '0px';
-    }, 1500);
-});
+//     setTimeout(() => {
+//         firstBannerRight.children[2].style.bottom = '0px';
+//     }, 1500);
+// });
 </script>
 <script>
 $(document).ready(function() {
@@ -183,9 +183,9 @@ $(document).ready(function() {
         items: 1,
         nav: true,
         dots: true,
-        loop: false,
-        rewind: true,
+        loop: true,
         mouseDrag: true,
+        animateOut: 'fadeOut',
         navText: ['←', '→'],
         margin: 8,
     });

@@ -140,8 +140,23 @@ header nav ul {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
   list-style: none;
+}
+@media screen and (max-width: 1200px) {
+  header nav ul {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header nav ul {
+    gap: 12px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  header nav ul {
+    gap: 8px;
+  }
 }
 header nav ul li a {
   text-decoration: none;
@@ -160,6 +175,16 @@ header .links {
   justify-content: center;
   align-items: center;
   gap: 24px;
+}
+@media screen and (max-width: 1200px) {
+  header .links {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header .links {
+    gap: 10px;
+  }
 }
 header .links a.bt-language {
   color: #2E3934;
@@ -215,6 +240,7 @@ header .brochure-newsletter a:hover {
 }
 header .brochure-newsletter span {
   opacity: 0.34;
+  margin: 0 8px;
 }
 @media screen and (max-width: 980px) {
   header .links, header .brochure-newsletter, header nav {
@@ -317,6 +343,7 @@ header .brochure-newsletter span {
 .mobile-header .links .brochure-newsletter span {
   color: #2E3934;
   opacity: 0.34;
+  margin: 0 8px;
 }
 @media screen and (max-width: 600px) {
   .mobile-header nav ul li a {
@@ -532,6 +559,7 @@ footer .contacts .social a:first-child {
 .home .destaque .owl-carousel .item .item-left,
 .home .destaque .owl-carousel .item .item-right {
   position: relative;
+  transition-delay: 500ms;
 }
 .home .destaque .owl-carousel .item .item-left > div,
 .home .destaque .owl-carousel .item .item-left span,
@@ -539,9 +567,6 @@ footer .contacts .social a:first-child {
 .home .destaque .owl-carousel .item .item-right span {
   position: absolute;
   z-index: 900;
-}
-.home .destaque .owl-carousel .item .item-left {
-  transform: translateX(0%);
 }
 .home .destaque .owl-carousel .item .item-right span {
   bottom: 0px;
@@ -552,12 +577,12 @@ footer .contacts .social a:first-child {
   padding: 8px;
   transition: all ease-in-out 0.4s;
 }
-.home .destaque .owl-carousel .item #firstBannerLeft {
+.home .destaque .owl-carousel .item .item-left {
   transition: 800ms;
   z-index: 550;
   transform: translateX(-103%);
 }
-.home .destaque .owl-carousel .item #firstBannerLeft > div {
+.home .destaque .owl-carousel .item .item-left > div {
   top: 34%;
   right: 0px;
   white-space: nowrap;
@@ -566,7 +591,7 @@ footer .contacts .social a:first-child {
   max-width: 0px;
   transition: ease-out 1200ms;
 }
-.home .destaque .owl-carousel .item #firstBannerLeft > div p {
+.home .destaque .owl-carousel .item .item-left > div p {
   font-size: 40px;
   background-color: #FFF;
   text-transform: uppercase;
@@ -576,11 +601,11 @@ footer .contacts .social a:first-child {
   overflow: hidden;
   text-overflow: clip;
 }
-.home .destaque .owl-carousel .item #firstBannerRight {
+.home .destaque .owl-carousel .item .item-right {
   transition: 800ms;
   transform: translateX(103%);
 }
-.home .destaque .owl-carousel .item #firstBannerRight > div {
+.home .destaque .owl-carousel .item .item-right > div {
   top: 43%;
   left: -375px;
   white-space: nowrap;
@@ -590,7 +615,7 @@ footer .contacts .social a:first-child {
   z-index: 500;
   visibility: hidden;
 }
-.home .destaque .owl-carousel .item #firstBannerRight p {
+.home .destaque .owl-carousel .item .item-right p {
   font-size: 25px;
   text-transform: uppercase;
   background-color: #FFF;
@@ -599,10 +624,10 @@ footer .contacts .social a:first-child {
   overflow: hidden;
   text-overflow: clip;
 }
-.home .destaque .owl-carousel .item #firstBannerRight p strong {
+.home .destaque .owl-carousel .item .item-right p strong {
   font-weight: 600;
 }
-.home .destaque .owl-carousel .item #firstBannerRight span {
+.home .destaque .owl-carousel .item .item-right span {
   bottom: -60px;
 }
 @media screen and (max-width: 980px) {
@@ -618,6 +643,28 @@ footer .contacts .social a:first-child {
   .home .destaque .owl-carousel .item .item-right {
     min-width: 96vw;
   }
+}
+.home .destaque .owl-carousel .active .item-left {
+  transform: translateX(0%);
+}
+.home .destaque .owl-carousel .active .item-left > div {
+  max-width: 400px;
+  transition-delay: 800ms;
+}
+.home .destaque .owl-carousel .active .item-right {
+  transform: translateX(0%);
+}
+.home .destaque .owl-carousel .active .item-right > div {
+  visibility: visible;
+  left: 0px;
+  transition-delay: 800ms;
+}
+.home .destaque .owl-carousel .active .item-right > span {
+  bottom: 0px;
+  transition-delay: 800ms;
+}
+.home .destaque .owl-carousel .active #firstItemRight > span {
+  transition-delay: 1300ms;
 }
 @media screen and (max-width: 980px) {
   .home .destaque .owl-carousel {
@@ -891,7 +938,7 @@ footer .contacts .social a:first-child {
 }
 .home .news .grid-cards .card-1 {
   height: 100%;
-  background-color: #2E3934;
+  background-color: #f4f4f4;
   max-width: 100%;
   overflow: hidden;
   display: flex;
@@ -911,23 +958,24 @@ footer .contacts .social a:first-child {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: #2E3934;
+  background-color: #f4f4f4;
   position: absolute;
   bottom: 0px;
   width: 100%;
+  transition: 800ms;
 }
 .home .news .grid-cards .card-1 .card-texto h3 {
-  color: #FFF;
+  color: #2E3934;
   font-weight: 600;
   font-size: 24px;
 }
 .home .news .grid-cards .card-1 .card-texto p {
-  color: #FFF;
+  color: #2E3934;
   font-weight: 400;
   font-size: 18px;
 }
 .home .news .grid-cards .card-1 .card-texto span {
-  color: #FFF;
+  color: #2E3934;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 14px;
@@ -958,11 +1006,18 @@ footer .contacts .social a:first-child {
   height: 100%;
   right: 0px;
   color: #2E3934;
+  transition: 800ms;
 }
 .home .news .grid-cards .card-2 .card-texto span {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 14px;
+}
+.home .news .grid-cards .card-1:hover .card-texto, .home .news .grid-cards .card-2:hover .card-texto {
+  background-color: #2E3934;
+}
+.home .news .grid-cards .card-1:hover .card-texto span, .home .news .grid-cards .card-1:hover .card-texto h3, .home .news .grid-cards .card-1:hover .card-texto p, .home .news .grid-cards .card-2:hover .card-texto span, .home .news .grid-cards .card-2:hover .card-texto h3, .home .news .grid-cards .card-2:hover .card-texto p {
+  color: #f4f4f4;
 }
 .home .news .grid-cards .card-3,
 .home .news .grid-cards .card-4 {
@@ -2243,8 +2298,8 @@ main.blog .content-blog-section .aside-container .tag-container .categorias-list
 body.blog header nav ul li:nth-child(5) a,
 body.blog .mobile-header nav ul li:nth-child(5) a, body.category header nav ul li:nth-child(5) a,
 body.category .mobile-header nav ul li:nth-child(5) a, body.tag header nav ul li:nth-child(5) a,
-body.tag .mobile-header nav ul li:nth-child(5) a, body.single header nav ul li:nth-child(5) a,
-body.single .mobile-header nav ul li:nth-child(5) a {
+body.tag .mobile-header nav ul li:nth-child(5) a, body.post-template-default header nav ul li:nth-child(5) a,
+body.post-template-default .mobile-header nav ul li:nth-child(5) a {
   color: #cecece;
 }
 
