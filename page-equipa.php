@@ -26,14 +26,14 @@
                 <p>
                     <?php the_sub_field('card_sobre'); ?>
                 </p>
-                <div class="social">
+                <!-- <div class="social">
                     <a href="<?php the_sub_field('link_instagram'); ?>" target="_blank">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                     <a href="<?php the_sub_field('link_linkedin'); ?>" target="_blank">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
         <?php $i++; endwhile; endif; ?>

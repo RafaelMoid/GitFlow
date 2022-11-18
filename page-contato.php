@@ -4,7 +4,7 @@
 
 <main class="contato">
   <div class="ctt-wrapper">
-    <h1 class="contacto-header">CONTATOS </br> <b>LIGHT DESIGN PORTUGAL</b></h1>
+    <h1 class="contacto-header">CONTACTOS </br> <b>LIGHT DESIGN PORTUGAL</b></h1>
     <p class="contacto-sub-titulo" data-aos="fade">
       Se sua empresa necessita de um projeto profissional de iluminação, entre em
       contato conosco e em breve nosso setor comercial retornará sua mensagem.

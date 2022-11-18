@@ -17,7 +17,7 @@
             <span>lisboa</span>
             <address>rua major afonso palla n&deg 23 H<br>1495-001 algés</address>
         </a>
-        <a class="phone" href="">
+        <a class="phone" href="tel:+351211914676">
             <span>phone</span><br>
             <span>+351 211 914 676</span>
         </a>
